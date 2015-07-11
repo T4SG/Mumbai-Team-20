@@ -26,7 +26,7 @@
       <file leaf-file-name="constants.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/config/constants.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="0" selection-start="1019" selection-end="1019" vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="1666">
+            <state line="25" column="0" selection-start="1019" selection-end="1019" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="1666">
               <folding />
             </state>
           </provider>
@@ -35,14 +35,8 @@
       <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/template/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="78" selection-start="2621" selection-end="2621" vertical-scroll-proportion="-8.5" vertical-offset="850" max-vertical-offset="2023">
-              <folding>
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#span#0;n#div#0;n#div#1;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="63" column="78" selection-start="2621" selection-end="2621" vertical-scroll-proportion="0.0" vertical-offset="1071" max-vertical-offset="2023">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -50,10 +44,8 @@
       <file leaf-file-name="validation.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/validation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="47" selection-start="2120" selection-end="2120" vertical-scroll-proportion="-14.384615" vertical-offset="510" max-vertical-offset="1224">
-              <folding>
-                <element signature="e#70#158#0" expanded="false" />
-              </folding>
+            <state line="67" column="17" selection-start="2463" selection-end="2463" vertical-scroll-proportion="-9.038462" vertical-offset="904" max-vertical-offset="1530">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -61,7 +53,7 @@
       <file leaf-file-name="validation_model.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/validation_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="22" selection-start="614" selection-end="614" vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="527">
+            <state line="28" column="9" selection-start="1051" selection-end="1051" vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="629">
               <folding />
             </state>
           </provider>
@@ -70,7 +62,7 @@
       <file leaf-file-name="validateForm.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/validation/validateForm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="159" column="59" selection-start="4411" selection-end="4419" vertical-scroll-proportion="4.7473116" vertical-offset="54" max-vertical-offset="3162">
+            <state line="235" column="10" selection-start="6828" selection-end="6828" vertical-scroll-proportion="1.7311828" vertical-offset="3029" max-vertical-offset="4437">
               <folding />
             </state>
           </provider>
@@ -79,7 +71,7 @@
       <file leaf-file-name="Welcome.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Welcome.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="63" selection-start="6" selection-end="69" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="527">
+            <state line="1" column="63" selection-start="6" selection-end="69" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="527">
               <folding />
             </state>
           </provider>
@@ -88,7 +80,7 @@
       <file leaf-file-name="database.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/config/database.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="28" selection-start="3466" selection-end="3466" vertical-scroll-proportion="-13.615385" vertical-offset="819" max-vertical-offset="1547">
+            <state line="69" column="28" selection-start="3466" selection-end="3466" vertical-scroll-proportion="0.0" vertical-offset="1173" max-vertical-offset="1547">
               <folding />
             </state>
           </provider>
@@ -110,8 +102,8 @@
         <option value="$PROJECT_DIR$/application/config/autoload.php" />
         <option value="$PROJECT_DIR$/application/config/database.php" />
         <option value="$PROJECT_DIR$/application/views/template/header.php" />
-        <option value="$PROJECT_DIR$/application/controllers/validation.php" />
         <option value="$PROJECT_DIR$/application/models/validation_model.php" />
+        <option value="$PROJECT_DIR$/application/controllers/validation.php" />
         <option value="$PROJECT_DIR$/application/views/validation/validateForm.php" />
       </list>
     </option>
@@ -149,7 +141,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -300,6 +291,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -332,7 +324,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -367,80 +359,108 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="54" selection-start="660" selection-end="660" vertical-scroll-proportion="262.19232" vertical-offset="7140" max-vertical-offset="8602">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Welcome.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="63" selection-start="6" selection-end="69" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="527">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="47" selection-start="2568" selection-end="2568" vertical-scroll-proportion="0.3046595" vertical-offset="1360" max-vertical-offset="2482">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="42" selection-start="1900" selection-end="1900" vertical-scroll-proportion="0.7258065" vertical-offset="462" max-vertical-offset="1020">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="28" selection-start="3466" selection-end="3466" vertical-scroll-proportion="-13.615385" vertical-offset="819" max-vertical-offset="1547">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/constants.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="1019" selection-end="1019" vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="1666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/template/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="78" selection-start="2621" selection-end="2621" vertical-scroll-proportion="-8.5" vertical-offset="850" max-vertical-offset="2023">
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#span#0;n#div#0;n#div#1;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="63" column="78" selection-start="2621" selection-end="2621" vertical-scroll-proportion="0.0" vertical-offset="1071" max-vertical-offset="2023">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/validation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="47" selection-start="2120" selection-end="2120" vertical-scroll-proportion="-14.384615" vertical-offset="510" max-vertical-offset="1224">
-          <folding>
-            <element signature="e#70#158#0" expanded="false" />
-          </folding>
+        <state line="57" column="47" selection-start="2120" selection-end="2120" vertical-scroll-proportion="0.0" vertical-offset="969" max-vertical-offset="1309">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/validation_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="22" selection-start="614" selection-end="614" vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="527">
+        <state line="22" column="65" selection-start="822" selection-end="822" vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="544">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/validation/validateForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="159" column="59" selection-start="4411" selection-end="4419" vertical-scroll-proportion="4.7473116" vertical-offset="54" max-vertical-offset="3162">
+        <state line="187" column="9" selection-start="5337" selection-end="5337" vertical-scroll-proportion="0.0" vertical-offset="3179" max-vertical-offset="3298">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Welcome.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="63" selection-start="6" selection-end="69" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="527">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="28" selection-start="3466" selection-end="3466" vertical-scroll-proportion="0.0" vertical-offset="1173" max-vertical-offset="1547">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="54" selection-start="660" selection-end="660" vertical-scroll-proportion="262.19232" vertical-offset="7140" max-vertical-offset="8602" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Welcome.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="63" selection-start="6" selection-end="69" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="527">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="47" selection-start="2568" selection-end="2568" vertical-scroll-proportion="0.3046595" vertical-offset="1360" max-vertical-offset="2482" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="42" selection-start="1900" selection-end="1900" vertical-scroll-proportion="0.7258065" vertical-offset="462" max-vertical-offset="1020" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="28" selection-start="3466" selection-end="3466" vertical-scroll-proportion="0.0" vertical-offset="1173" max-vertical-offset="1547">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/constants.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="1019" selection-end="1019" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="1666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/template/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="78" selection-start="2621" selection-end="2621" vertical-scroll-proportion="0.0" vertical-offset="1071" max-vertical-offset="2023">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/validation_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="9" selection-start="1051" selection-end="1051" vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/validation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="17" selection-start="2463" selection-end="2463" vertical-scroll-proportion="-9.038462" vertical-offset="904" max-vertical-offset="1530">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/validation/validateForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="235" column="10" selection-start="6828" selection-end="6828" vertical-scroll-proportion="1.7311828" vertical-offset="3029" max-vertical-offset="4437">
           <folding />
         </state>
       </provider>

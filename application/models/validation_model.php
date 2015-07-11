@@ -19,7 +19,13 @@ class validation_model extends CI_Model{
 			return FALSE;
 		}
 		else{
-			$query = ""
+			$query = "INSERT INTO school(Name,UserName,NoOfStudents,CostOfSchool,Responsiveness,Support,TimeLine,Intake,State,Country,Place) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+			$sql = $this->db->query($query, array($nameOfSchool,$name,$presentStudent,$cost,$responsive,$cooperation,$duration,$expectedStudent,$state,$country,$city));
+			if($sql==1){
+				$success = "Your request has been sent successfully";
+				return $success;
+			}
+			else return FALSE;
 		}
 	}
 

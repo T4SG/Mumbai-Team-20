@@ -158,8 +158,8 @@ echo form_open('validation/validate');
 					<select name="duration" id="duration" class="form-control">
 						<option value="">Please Select a duration</option>
 						<option name="five" value="<5 years"> <5 years </option>
-						<option name="four" value="<4 years"><3 years</option>
-						<option name="three" value="<3 years"><2 years</option>
+						<option name="four" value="<4 years"><4 years</option>
+						<option name="three" value="<3 years"><3 years</option>
 						<option name="two" value="<2 years"><2 years</option>
 						<option name="one" value="<1 year"><1 year</option>
 					</select>
@@ -177,7 +177,24 @@ echo form_open('validation/validate');
 		</div>
 	</div>
 </div>
+<script type="text/javascript">var cooperation = document.getElementById('cooperation');
+var duration = document.getElementById('duration');
+var responsive = document.getElementById('responsive');
+
+if (cooperation==null) {alert("Please select a cooperation level")};
+if (duration==null) {alert("Please select a duration")};
+if (responsive==null) {alert("Please select a response level")};
+</script>
 <?php echo form_close(); ?>
+<<<<<<< HEAD
+<script type="text/javascript">var cooperation = document.getElementById('cooperation');
+	var duration = document.getElementById('duration');
+	var responsive = document.getElementById('responsive');
+
+	if (cooperation==null) {alert("Please select a cooperation level")};
+	if (duration==null) {alert("Please select a duration")};
+	if (responsive==null) {alert("Please select a response level")};
+=======
 <script>
 var name=document.getElementById('name').value;
 if(!name.match(/^[A-Za-z]+$/))
@@ -234,4 +251,5 @@ if (cooperation==null) {alert("Please select a cooperation level")};
 if (duration==null) {alert("Please select a duration")};
 if (responsive==null) {alert("Please select a response level")};
 
+>>>>>>> bfc1dee0a1a9b447ed77fd3ab0b8002ca7ffd0f5
 </script>
