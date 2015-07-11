@@ -62,7 +62,7 @@
       <file leaf-file-name="validateForm.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/validation/validateForm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="168" column="10" selection-start="4734" selection-end="4734" vertical-scroll-proportion="0.5125448" vertical-offset="2570" max-vertical-offset="3298">
+            <state line="235" column="10" selection-start="6828" selection-end="6828" vertical-scroll-proportion="1.7311828" vertical-offset="3029" max-vertical-offset="4437">
               <folding />
             </state>
           </provider>
@@ -324,7 +324,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -460,7 +460,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/validation/validateForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="168" column="10" selection-start="4734" selection-end="4734" vertical-scroll-proportion="0.5125448" vertical-offset="2570" max-vertical-offset="3298">
+        <state line="235" column="10" selection-start="6828" selection-end="6828" vertical-scroll-proportion="1.7311828" vertical-offset="3029" max-vertical-offset="4437">
           <folding />
         </state>
       </provider>
