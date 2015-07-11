@@ -46,7 +46,7 @@ class validation extends CI_Controller{
 
 				$validate = array(
 					'name' => $name,
-					'nameOfSchool' => $nameOfSchool,
+					'nameOfSchool' => strtoupper($nameOfSchool),
 					'country' => $country,
 					'state' => $state,
 					'city' => $city,
@@ -59,7 +59,20 @@ class validation extends CI_Controller{
 				);
 
 				$query = $this->validation_model->validate($validate);
-
+				if($query==FALSE){
+					$data['error'] = "Error! Please Try Again.";
+					$this->load->view('template/header');
+					$this->load->view('template/msg',$data);
+					$this->load->view('validation/validateForm');
+					$this->load->view('template/footer');
+				}
+				else{
+					$data['success'] = $query;
+					$this->load->view('template/header');
+					$this->load->view('template/msg',$data);
+					$this->load->view('validation/validateForm');
+					$this->load->view('template/footer');
+				}
 			}
 		}
 		else{
