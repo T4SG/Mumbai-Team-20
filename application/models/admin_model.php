@@ -15,9 +15,18 @@ class admin_model extends CI_Model{
 
 	public function admin_verify($log){
 		extract($log);
-		$sql = "SELECT flag FROM user WHERE username = '$username' AND password = '$password'";
+		$sql = "SELECT flag FROM user WHERE username = '$username' AND password = '$password' LIMIT 1";
 		$query = mysql_query($sql);
-		
+		$flag = 0;
+		while($data = mysql_fetch_array($query)){
+			$flag = $data['flag'];
+		}
+		if(flag==1){
+			return TRUE;
+		}
+		else if(flag==0){
+			return FALSE;
+		}
 	}
 
 } 
