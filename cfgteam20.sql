@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 11, 2015 at 12:58 PM
+-- Generation Time: Jul 11, 2015 at 01:29 PM
 -- Server version: 5.6.24
 -- PHP Version: 5.6.8
 
@@ -31,7 +31,6 @@ CREATE TABLE IF NOT EXISTS `admin` (
   `Password` varchar(30) NOT NULL,
   `Name` varchar(30) NOT NULL,
   `Mob` int(10) NOT NULL,
-  `Email` varchar(30) NOT NULL,
   `Sr` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -44,14 +43,16 @@ CREATE TABLE IF NOT EXISTS `admin` (
 CREATE TABLE IF NOT EXISTS `school` (
   `Sr` int(10) NOT NULL,
   `Name` varchar(30) NOT NULL,
-  `Location` varchar(30) NOT NULL,
   `UserName` varchar(30) NOT NULL,
   `NoOfStudents` int(10) DEFAULT NULL,
   `CostOfSchool` int(20) DEFAULT NULL,
   `Responsiveness` varchar(30) DEFAULT NULL,
   `Support` varchar(30) DEFAULT NULL,
   `TimeLine` int(10) DEFAULT NULL,
-  `Intake` int(10) NOT NULL
+  `Intake` int(10) NOT NULL,
+  `State` varchar(30) NOT NULL,
+  `Country` varchar(30) NOT NULL,
+  `Place` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
