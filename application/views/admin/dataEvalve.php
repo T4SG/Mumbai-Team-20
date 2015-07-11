@@ -7,7 +7,7 @@
  */
 	$coste = array(
 		"id" => "coste",
-		"name" => "cr",
+		"name" => "ce",
 		"placeholder" => "Cost Importance",
 		"maxlength" => "50",
 		"class" => "form-control element-width-3",

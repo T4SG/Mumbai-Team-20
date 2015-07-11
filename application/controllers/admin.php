@@ -234,6 +234,44 @@ class admin extends CI_Controller{
 
 	public function dataEvaluation(){
 		$this->load->library('form_validation');
+		if(isset($_POST['evaluate'])){
+			$this->form_validation->set_rules('ce','Cost','required|numeric');
+			$this->form_validation->set_rules('tr','Time','required|numeric');
+			$this->form_validation->set_rules('rr','Responsiveness','required|numeric');
+			$this->form_validation->set_rules('dr','Distance','required|numeric');
+			$this->form_validation->set_rules('cr','Collaboration','required|numeric');
+			$this->form_validation->set_rules('sr','Support','required|numeric');
+			if($this->form_validation->run()!=FALSE){
+				$ce = $_POST['ce'];
+				$tr = $_POST['tr'];
+				$rr = $_POST['rr'];
+				$dr = $_POST['dr'];
+				$cr = $_POST['cr'];
+				$sr = $_POST['sr'];
+
+				if($ce=="" || $tr=="" || $rr=="" || $dr=="" || $cr=="" || $sr==""){
+					$data['error'] = "All fields are required";
+					$this->load->view('template/header');
+					$this->load->view('template/msg',$data);
+					$this->load->view('admin/dataEvalve');
+					$this->load->view('template/footer');
+				}
+				else{
+					$evaluation = array(
+						"ce" => $ce,
+						"tr" => $tr,
+						"rr" => $rr,
+						"dr" => $dr,
+						"cr" => $cr,
+						"sr" => $sr
+					);
+					$db = $$this->admin_model->dataEvaluation($evaluation);
+					if($db){
+						
+					}
+				}
+			}
+		}
 
 	}
 }
