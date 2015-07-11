@@ -8,6 +8,7 @@
 
 	$username = array(
 		"name" => "username",
+		"type" => "email",
 		"id" => "username",
 		"class" => "form-control",
 		"placeholder" => "Enter your username",
@@ -16,6 +17,7 @@
 
 	$password = array(
 		"name" => "password",
+		"type" => "password",
 		"id" => "password",
 		"class" => "form-control",
 		"placeholder" => "Enter your password",

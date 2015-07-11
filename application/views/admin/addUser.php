@@ -48,58 +48,60 @@ $city = array(
 		"placeholder" => "Enter City",
 		"autocomplete" => "off"
 	);
-	
-?>
-<div id="page-wrapper">
 
-	<div class="row" style="padding-top: 20px">
-	    <div class="col-sm-4">
+?>
+	<div id="page-wrapper">
+		<div class="row" style="padding-top: 20px">
+			<div class="col-sm-4">
 				<div class="form-group">
 					<?php echo form_label('Name','name'); ?>
 					<?php echo form_input($name); ?>
 				</div>
 			</div>
-		<div class="col-sm-4">
+			<div class="col-sm-4">
 				<div class="form-group">
 					<?php echo form_label('Mobile No','mob'); ?>
 					<?php echo form_input($mob); ?>
 				</div>
-			</div>	
-		<div class="col-sm-12">
-			<div class="col-sm-4">
-				<div class="form-group">
-					<?php echo form_label('User','user'); ?>
-					<?php echo form_input($user); ?>
+			</div>
+			<div class="col-sm-12">
+				<div class="col-sm-4">
+					<div class="form-group">
+						<?php echo form_label('User','user'); ?>
+						<?php echo form_input($user); ?>
+					</div>
 				</div>
-			</div>
-			<div class="col-sm-4">
-				<div class="form-group">
-					<?php echo form_label('Password','password'); ?>
-					<?php echo form_input($password); ?>
+				<div class="col-sm-4">
+					<div class="form-group">
+						<?php echo form_label('Password','password'); ?>
+						<?php echo form_input($password); ?>
+					</div>
 				</div>
-			</div>
-			
-			<div class="col-sm-4">
-				<div class="form-group">
-					<?php echo form_label('Confirm Password','passwordC'); ?>
-					<?php echo form_input($passwordC); ?>
+
+				<div class="col-sm-4">
+					<div class="form-group">
+						<?php echo form_label('Confirm Password','passwordC'); ?>
+						<?php echo form_input($passwordC); ?>
+					</div>
 				</div>
-			</div>
-	    <div class="col-sm-4">
-				<div class="form-group">
-					<?php echo form_label('Country','country'); ?>
-					<?php echo form_input($country); ?>
+				<div class="col-sm-4">
+					<div class="form-group">
+						<?php echo form_label('Country','country'); ?>
+						<?php echo form_input($country); ?>
+					</div>
 				</div>
-			</div>
-		div class="col-sm-4">
-				<div class="form-group">
-					<?php echo form_label('City','city'); ?>
-					<?php echo form_input($city); ?>
+				<div class="col-sm-4">
+					<div class="form-group">
+						<?php echo form_label('City','city'); ?>
+						<?php echo form_input($city); ?>
+					</div>
 				</div>
+
 			</div>
-			</div>
-</div>
-</div>
+		</div>
+	</div>
+<?php echo form_close(); ?>
+
 <script>
 function chkemail()
 		{	val=document.getElementById('user');
@@ -146,13 +148,5 @@ function chkmob()
 	{alert("Enter a valid Mobile Numbaer");
 	document.getElementById('mob').value="";
 	}
-}	
-
-
-
-
-
-
-
-
+}
 </script>

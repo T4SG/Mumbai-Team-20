@@ -15,16 +15,16 @@ class admin_model extends CI_Model{
 
 	public function admin_verify($log){
 		extract($log);
-		$sql = "SELECT flag FROM user WHERE username = '$username' AND password = '$password' LIMIT 1";
-		$query = mysql_query($sql);
-		$flag = 0;
-		while($data = mysql_fetch_array($query)){
-			$flag = $data['flag'];
+		$sql = "SELECT status FROM user WHERE Email = '$username' AND Password = '$password'";
+		$query = $this->db->query($sql);
+		$status = 0;
+		foreach($query->result_array() as $fetchrow){
+			$status = $fetchrow['status'];
 		}
-		if(flag==1){
+		if($status==1){
 			return TRUE;
 		}
-		else if(flag==0){
+		else if($status==0){
 			return FALSE;
 		}
 	}

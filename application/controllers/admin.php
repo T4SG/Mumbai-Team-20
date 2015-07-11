@@ -20,7 +20,7 @@ class admin extends CI_Controller{
 	public function adminAuthenticate(){
 		$this->load->library('form_validation');
 		if(isset($_POST['login'])){
-			$this->form_validation->set_rules('username','Username','required|valid_email|xss-client|trim');
+			$this->form_validation->set_rules('username','Username','required|valid_email|trim');
 			$this->form_validation->set_rules('password','Password','required|trim');
 			if($this->form_validation->run()!=FALSE){
 				$username = $_POST['username'];
@@ -35,8 +35,8 @@ class admin extends CI_Controller{
 						'username' => $username,
 						'password' => $password
 					);
-					$flag = $this->admin_model->admin_verify($log);
-					if($flag){
+					$status = $this->admin_model->admin_verify($log);
+					if($status){
 						$this->load->view('template/header');
 						$this->load->view('admin/adminDashboard');
 						$this->load->view('template/footer');
@@ -48,11 +48,31 @@ class admin extends CI_Controller{
 					}
 				}
 			}
+			else{
+				$data['error'] = "Error Authenticating";
+				$this->load->view('template/msg',$data);
+				$this->load->view('admin/adminLogin');
+			}
 		}
 		else{
 			$this->load->view('admin/adminLogin');
 		}
+	}
+
+	public function adminDashboard(){
+		if(isset($_POST['user'])){
+			$this->addUser();
+		}
+		else if(isset($POST['admin'])){
+			$this->addAdmin();
+		}
+	}
+
+	public function addUser(){
+		$this->load->view('template/header');
+		$this->load->view('admin/addUser');
+		$this->load->view('template/footer');
 
 	}
 
-} 
+}
