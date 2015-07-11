@@ -65,7 +65,7 @@ class admin extends CI_Controller{
 		if(isset($_POST['user'])){
 			$this->addUser();
 		}
-		else if(isset($POST['admin'])){
+		else if(isset($_POST['admin'])){
 			$this->addAdmin();
 		}
 	}

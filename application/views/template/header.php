@@ -34,7 +34,7 @@
         ?>
         <div class="col-sm-3" style="float: right; margin: 10px auto">
             <div class="input-group custom-search-form navbar-right">
-                <h1><?php if(isset($user)){echo $user;} ?></h1>
+                <h3><?php if(isset($user)){echo $user;} ?></h3>
             </div>
             <br>
             <h5>

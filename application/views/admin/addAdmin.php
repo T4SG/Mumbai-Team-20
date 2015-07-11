@@ -128,7 +128,7 @@ $city = array(
 
 			<div class="form-group">
 				<?php echo br(1);
-					echo form_submit($addUser); ?>
+					echo form_submit($addAdmin); ?>
 			</div>
 		</div>
 
