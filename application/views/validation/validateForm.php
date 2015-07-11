@@ -157,7 +157,7 @@ echo form_open('validation/validate');
 					<?php echo form_label('Duration','duration'); ?>
 					<select name="duration" id="duration" class="form-control">
 						<option value="">Please Select a duration</option>
-						<option name="five" value="<5 years"><5 years</option>
+						<option name="five" value="<5 years"> <5 years </option>
 						<option name="four" value="<4 years"><3 years</option>
 						<option name="three" value="<3 years"><2 years</option>
 						<option name="two" value="<2 years"><2 years</option>
