@@ -29,8 +29,9 @@ class validation extends CI_Controller{
 			$this->form_validation->set_rules('presentStudent','Present Students','required');
 			$this->form_validation->set_rules('expectedStudent','Expected Students','required');
 			$this->form_validation->set_rules('duration','Duration','required');
-			$this->form_validation->set_rules('responsive','Responsibility','required');
-			$this->form_validation->set_rules('cooperation','Co-operation','required');
+			$this->form_validation->set_rules('collaborate','Collaboration','required');
+			$this->form_validation->set_rules('support','Support','required');
+			$this->form_validation->set_rules('responsive','Responsive','required');
 			if($this->form_validation->run()!=FALSE){
 				$name = $_POST['name'];
 				$nameOfSchool = $_POST['nameOfSchool'];
@@ -42,7 +43,8 @@ class validation extends CI_Controller{
 				$expectedStudent = $_POST['expectedStudent'];
 				$duration = $_POST['duration'];
 				$responsive = $_POST['responsive'];
-				$cooperation = $_POST['cooperation'];
+				$support = $_POST['support'];
+				$collaborate = $_POST['collaborate'];
 
 				$validate = array(
 					'name' => $name,
@@ -55,7 +57,8 @@ class validation extends CI_Controller{
 					'expectedStudent' => $expectedStudent,
 					'duration' => $duration,
 					'responsive' => $responsive,
-					'cooperation' => $cooperation
+					'collaborate' => $collaborate,
+					'support' => $support
 				);
 
 				$query = $this->validation_model->validate($validate);

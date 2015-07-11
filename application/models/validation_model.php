@@ -15,12 +15,13 @@ class validation_model extends CI_Model{
 
 	public function validate($valid){
 		extract($valid);
-		if($name==null && $nameOfSchool==null && $cost==null && $duration==null && $cooperation==null && $responsive==null && $expectedStudent==null && $presentStudent==null && $country==null && $state==null && $city==null){
+		if($name==null && $nameOfSchool==null && $cost==null && $duration==null && $support==null && $collaborate==null && $responsive==null && $expectedStudent==null && $presentStudent==null && $country==null && $state==null && $city==null){
 			return FALSE;
 		}
 		else{
-			$query = "INSERT INTO school(Name,UserName,NoOfStudents,CostOfSchool,Responsiveness,Support,TimeLine,Intake,State,Country,Place) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
-			$sql = $this->db->query($query, array($nameOfSchool,$name,$presentStudent,$cost,$responsive,$cooperation,$duration,$expectedStudent,$state,$country,$city));
+			$query = "INSERT INTO school(Name,UserName,NoOfStudents,CostOfSchool,Responsiveness,Support,collaborate,TimeLine,Intake,State,Country,Place) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
+			$sql = $this->db->query($query, array($nameOfSchool,$name,$presentStudent,$cost,$responsive,$support,$collaborate,$duration,$expectedStudent,$state,$country,$city));
+			echo $this->db->last_query();
 			if($sql==1){
 				$success = "Your request has been sent successfully";
 				return $success;

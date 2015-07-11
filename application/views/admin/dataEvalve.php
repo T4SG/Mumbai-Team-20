@@ -55,7 +55,7 @@
 	);
 	$evaluate = array(
 		"id" => "evaluate",
-		"name" => "evaluate",
+		"name" => "evaluation",
 		"class" => "btn btn-lg btn-success btn-block",
 		"value" => "Evaluate Data"
 	);

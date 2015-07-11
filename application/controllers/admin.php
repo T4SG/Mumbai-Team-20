@@ -71,6 +71,9 @@ class admin extends CI_Controller{
 		else if(isset($_POST['admin'])){
 			$this->addAdmin();
 		}
+		else if(isset($_POST['evaluate'])){
+			$this->dataEvaluation();
+		}
 	}
 
 	public function addUser(){
@@ -234,7 +237,7 @@ class admin extends CI_Controller{
 
 	public function dataEvaluation(){
 		$this->load->library('form_validation');
-		if(isset($_POST['evaluate'])){
+		if(isset($_POST['evaluation'])){
 			$this->form_validation->set_rules('ce','Cost','required|numeric');
 			$this->form_validation->set_rules('tr','Time','required|numeric');
 			$this->form_validation->set_rules('rr','Responsiveness','required|numeric');
@@ -265,12 +268,17 @@ class admin extends CI_Controller{
 						"cr" => $cr,
 						"sr" => $sr
 					);
-					$db = $$this->admin_model->dataEvaluation($evaluation);
-					if($db){
-						
+					$this->admin_model->dataEvaluation($evaluation);
+					if(true){
+						echo "he";
 					}
 				}
 			}
+		}
+		else{
+			$this->load->view('template/header');
+			$this->load->view('admin/dataEvalve');
+			$this->load->view('template/footer');
 		}
 
 	}

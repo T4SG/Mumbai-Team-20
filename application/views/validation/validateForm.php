@@ -132,9 +132,9 @@ echo form_open('validation/validate');
 			</div>
 			<div class="col-sm-4">
 				<div class="form-group">
-					<?php echo form_label('') ?>
-					<select name="responsive" class="form-control" id="responsive">
-						<option value="">Please Select responsiveness</option>
+					<?php echo form_label('Collaboration','responsive') ?>
+					<select name="collaborate" class="form-control" id="responsive">
+						<option value="">Please Select collaboration</option>
 						<option name="ngo" value="NGO">NGO</option>
 						<option name="corporate" value="CORPORATE">Corporate</option>
 						<option name="contractor" value="CONTRACTOR">Contractor</option>
@@ -143,9 +143,9 @@ echo form_open('validation/validate');
 			</div>
 			<div class="col-sm-4">
 				<div class="form-group">
-					<?php echo form_label('Co-operation','cooperation'); ?>
-					<select name="cooperation" id="cooperation" class="form-control">
-						<option value="">Please Select level of cooperation</option>
+					<?php echo form_label('Support','cooperation'); ?>
+					<select name="support" id="cooperation" class="form-control">
+						<option value="">Please Select level of support</option>
 						<option name="full" value="FULL">Full</option>
 						<option name="moderate" value="MODERATE">Moderate</option>
 						<option name="null" value="NULL">Null</option>
@@ -162,6 +162,18 @@ echo form_open('validation/validate');
 						<option name="three" value="<3 years"><3 years</option>
 						<option name="two" value="<2 years"><2 years</option>
 						<option name="one" value="<1 year"><1 year</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="form-group">
+					<?php echo form_label('Responsiveness'); ?>
+					<select name="responsive" id="responsive" class="form-control">
+						<option value="">Please Select a duration</option>
+						<option name="five" value="Very Frequent">Very Frequent</option>
+						<option name="four" value="Frequent">Frequent</option>
+						<option name="three" value="Occasional">Occasional</option>
+						<option name="two" value="Rarely">Rarely</option>
 					</select>
 				</div>
 			</div>

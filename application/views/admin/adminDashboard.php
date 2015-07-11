@@ -22,20 +22,34 @@
 					'class' => 'btn btn-info btn-lg',
 					'value' => 'Add HHF user'
 				);
+				$evaluation = array(
+					'id' => 'evaluation',
+					'class' => 'evaluation',
+					'name' => 'evaluate',
+					'value' => 'Evaluate',
+					'class' => 'btn btn-info btn-lg'
+				);
 				echo form_open('admin/adminDashboard');
 			?>
 
-			<div class="col-sm-6">
+			<div class="col-sm-4">
 				<div class="form-group">
 					<?php
 						echo form_submit($user);
 					?>
 				</div>
 			</div>
-			<div class="col-sm-6">
+			<div class="col-sm-4">
 				<div class="form-group">
 					<?php
 						echo form_submit($admin);
+					?>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="form-group">
+					<?php
+						echo form_submit($evaluation);
 					?>
 				</div>
 			</div>
