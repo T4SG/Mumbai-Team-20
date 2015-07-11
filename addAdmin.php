@@ -3,12 +3,6 @@
  
  */
 
-
-
-
-
-
-
 <?php
 $user= array(
 		"class" => "form-control col-md-4 col-xs-12",
