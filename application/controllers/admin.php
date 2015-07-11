@@ -37,12 +37,14 @@ class admin extends CI_Controller{
 					);
 					$status = $this->admin_model->admin_verify($log);
 					if($status){
-						$this->load->view('template/header');
+						$data['user'] = "$username";
+						$this->load->view('template/header',$data);
 						$this->load->view('admin/adminDashboard');
 						$this->load->view('template/footer');
 					}
 					else{
-						$this->load->view('template/header');
+						$data['user'] = "$username";
+						$this->load->view('template/header',$data);
 						$this->load->view('validation/validateForm');
 						$this->load->view('template/footer');
 					}
@@ -69,10 +71,78 @@ class admin extends CI_Controller{
 	}
 
 	public function addUser(){
-		$this->load->view('template/header');
-		$this->load->view('admin/addUser');
-		$this->load->view('template/footer');
-
+		$this->load->library('form_validation');
+		if(isset($_POST['addUser'])){
+			$this->form_validation->set_rules('name','Name','required|alpha|trim');
+			$this->form_validation->set_rules('user','Username','required|trim|valid_email');
+			$this->form_validation->set_rules('password','Password','required|trim');
+			$this->form_validation->set_rules('Cpassword','Confirm Password','required|trim');
+			$this->form_validation->set_rules('country','Country','required|trim|alpha');
+			$this->form_validation->set_rules('city','City','required|trim|alpha');
+			$this->form_validation->set_rules('mob','Mobile No','required|numeric|trim');
+			if($this->form_validation->set_rules()!=FALSE){
+				$username = $_POST['user'];
+				$name = $_POST['name'];
+				$password = $_POST['password'];
+				$Cpassword = $_POST['Cpassword'];
+				$country = $_POST['country'];
+				$city = $_POST['city'];
+				$mobile = $_POST['mob'];
+				if($password==$Cpassword){
+					$password = hash('sha256',md5($password));
+					$addUser = array(
+						"name" => $name,
+						"username" => $username,
+						"password" => $password,
+						"country" => $country,
+						"city" => $city,
+						"mobile" => $mobile
+					);
+					if($username=="" || $name=="" || $password=="" || $country=="" || $city=="" || $mobile==""){
+						$data['warning'] = "Please enter all fields";
+						$this->load->view('template/header');
+						$this->load->view('template/msg');
+						$this->load->view('admin/addUser');
+						$this->load->view('template/footer');
+					}
+					else{
+						$user = $this->admin_model->addUser($addUser);
+						if($user!=FALSE){
+							$data['success'] = $user;
+							$this->load->view('template/header');
+							$this->load->view('template/msg');
+							$this->load->view('admin/adminDashboard');
+							$this->load->view('template/footer');
+						}
+						else{
+							$data['warning'] = "Database entry failed!";
+							$this->load->view('template/header');
+							$this->load->view('template/msg');
+							$this->load->view('admin/addUser');
+							$this->load->view('template/footer');
+						}
+					}
+				}
+				else{
+					$data['warning'] = "Password mismatch!";
+					$this->load->view('template/header');
+					$this->load->view('template/msg');
+					$this->load->view('admin/addUser');
+					$this->load->view('template/footer');
+				}
+			}
+			else{
+				$data['error'] = "Validation failed!";
+				$this->load->view('template/header');
+				$this->load->view('template/msg');
+				$this->load->view('admin/addUser');
+				$this->load->view('template/footer');
+			}
+		}
+		else{
+			$this->load->view('template/header');
+			$this->load->view('admin/addUser');
+			$this->load->view('template/footer');
+		}
 	}
-
 }

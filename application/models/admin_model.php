@@ -29,4 +29,14 @@ class admin_model extends CI_Model{
 		}
 	}
 
+	public function addUser($addUser){
+		extract($addUser);
+		$sql = "INSERT INTO user(Password,Name,Country,City,Mob,Email,status) VALUES(?,?,?,?,?,?,?)";
+		$query = $this->db->query($sql, array($password,$name,$country,$city,$mobile,$username,1));
+		if($query){
+			$ret = "Local Partner <b>".$name."</b> added successfully";
+		}
+		else return FALSE;
+	}
+
 } 

@@ -34,12 +34,7 @@
         ?>
         <div class="col-sm-3" style="float: right; margin: 10px auto">
             <div class="input-group custom-search-form navbar-right">
-                <input type="int" name="member_id" class="form-control" placeholder="Search By Member ID only!" style="height: 30px">
-                    <span class="input-group-btn" name="id_search">
-                        <button class="btn btn-default" type="submit" name="id_search" style="height: 30px">
-                            <b></b><i class="fa fa-search" name="id_search"></i></b>
-                        </button>
-                    </span>
+                <h1><?php if(isset($user)){echo $user;} ?></h1>
             </div>
             <br>
             <h5>
