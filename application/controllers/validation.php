@@ -9,13 +9,25 @@
 class validation extends CI_Controller{
 
 	public function index(){
-		$this->load->view('template/header');
+		$this->validate();
 	}
 
 	public function validate(){
-		$this->load->view('template/header');
-		$this->load->view('validation/validateForm');
-		$this->load->view('template/footer');
+		$this->load->library('form_validation');
+		if(isset($_POST['submit'])){
+			$this->form_validation->set_rules('name','Name','required|alpha');
+			$this->form_validation->set_rules('nameOfSchool','Name Of School','required|alpha');
+			$this->form_validation->set_rules('country','Country','required|alpha');
+			$this->form_validation->set_rules('state','State','required|alpha');
+			$this->form_validation->set_rules('city','Place','required|alpha');
+			$this->form_validation->set_rules('cost','Cost','required');
+			$this->form_validation->set_rules('name','Name','required|alpha');
+		}
+		else{
+			$this->load->view('template/header');
+			$this->load->view('validation/validateForm');
+			$this->load->view('template/footer');
+		}
 	}
 
 } 
