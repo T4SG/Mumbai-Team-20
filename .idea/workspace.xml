@@ -50,7 +50,7 @@
       <file leaf-file-name="validation.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/validation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="51" selection-start="838" selection-end="838" vertical-scroll-proportion="0.5483871" vertical-offset="0" max-vertical-offset="561">
+            <state line="41" column="36" selection-start="1679" selection-end="1679" vertical-scroll-proportion="0.9390681" vertical-offset="88" max-vertical-offset="901">
               <folding>
                 <element signature="e#70#158#0" expanded="false" />
               </folding>
@@ -61,7 +61,7 @@
       <file leaf-file-name="validateForm.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/validation/validateForm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="136" column="69" selection-start="3423" selection-end="3423" vertical-scroll-proportion="-88.92308" vertical-offset="0" max-vertical-offset="3162">
+            <state line="80" column="23" selection-start="1755" selection-end="1755" vertical-scroll-proportion="32.692307" vertical-offset="2210" max-vertical-offset="3162">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -102,8 +102,8 @@
         <option value="$PROJECT_DIR$/application/config/routes.php" />
         <option value="$PROJECT_DIR$/application/config/autoload.php" />
         <option value="$PROJECT_DIR$/application/config/database.php" />
-        <option value="$PROJECT_DIR$/application/views/validation/validateForm.php" />
         <option value="$PROJECT_DIR$/application/views/template/header.php" />
+        <option value="$PROJECT_DIR$/application/views/validation/validateForm.php" />
         <option value="$PROJECT_DIR$/application/controllers/validation.php" />
       </list>
     </option>
@@ -398,7 +398,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/validation/validateForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="69" selection-start="3423" selection-end="3423" vertical-scroll-proportion="-88.92308" vertical-offset="0" max-vertical-offset="3162">
+        <state line="80" column="23" selection-start="1755" selection-end="1755" vertical-scroll-proportion="32.692307" vertical-offset="2210" max-vertical-offset="3162">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
@@ -407,7 +407,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/validation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="51" selection-start="838" selection-end="838" vertical-scroll-proportion="0.5483871" vertical-offset="0" max-vertical-offset="561">
+        <state line="41" column="36" selection-start="1679" selection-end="1679" vertical-scroll-proportion="0.9390681" vertical-offset="88" max-vertical-offset="901">
           <folding>
             <element signature="e#70#158#0" expanded="false" />
           </folding>

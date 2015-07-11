@@ -132,7 +132,7 @@ echo form_open('validation/validate');
 			</div>
 			<div class="col-sm-4">
 				<div class="form-group">
-					<?php echo form_label('') ?>
+					<?php echo form_label('Responsibility','responsive'); ?>
 					<select name="responsive" class="form-control" id="responsive">
 						<option value="">Please Select responsiveness</option>
 						<option name="ngo" value="NGO">NGO</option>
