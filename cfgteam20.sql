@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 11, 2015 at 12:23 PM
+-- Generation Time: Jul 11, 2015 at 12:33 PM
 -- Server version: 5.6.24
 -- PHP Version: 5.6.8
 
@@ -46,14 +46,13 @@ CREATE TABLE IF NOT EXISTS `school` (
   `Name` varchar(30) NOT NULL,
   `Location` varchar(30) NOT NULL,
   `UserName` varchar(30) NOT NULL,
-  `Distance` int(10) DEFAULT NULL,
   `NoOfStudents` int(10) DEFAULT NULL,
   `CostOfSchool` int(20) DEFAULT NULL,
   `Responsiveness` varchar(30) DEFAULT NULL,
   `Ngo` varchar(30) DEFAULT NULL,
-  `AmountDamage` varchar(30) DEFAULT NULL,
   `Support` varchar(30) DEFAULT NULL,
-  `TimeLine` int(10) DEFAULT NULL
+  `TimeLine` int(10) DEFAULT NULL,
+  `Intake` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
