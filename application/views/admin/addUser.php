@@ -60,6 +60,7 @@ $city = array(
 		"class" => "btn btn-lg btn-success btn-block",
 		"value" => "Add User",
 	);
+	echo form_open('admin/addUser');
 
 ?>
 	<div id="page-wrapper">

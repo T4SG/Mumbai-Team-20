@@ -2,7 +2,7 @@
 $name= array(
 		"class" => "form-control col-md-4 col-xs-12",
 		"id" => "name",
-		"name" => "user",
+		"name" => "name",
 		"onblur"=>"name(this.value)",
 		"placeholder" => "Enter Name",
 		"autocomplete" => "off"
@@ -54,64 +54,88 @@ $city = array(
 		"onblur"=>"city()",
 		"autocomplete" => "off"
 	);
-	
+
+	$addAdmin = array(
+		"id" => "admin",
+		"class" => "btn btn-lg btn-success btn-block",
+		"name" => "addAdmin",
+		"value" => "Add Admin",
+		"autocomplete" => "off"
+	);
+	echo form_open('admin/addAdmin');
 ?>
 <div id="page-wrapper">
-
 	<div class="row" style="padding-top: 20px">
-	    <div class="col-sm-4">
-				<div class="form-group">
-					<?php echo form_label('Name','name'); ?>
-					<?php echo form_input($name); ?>
-				</div>
+		<div class="col-sm-offset-3 col-sm-6 col-xs-12">
+
+			<div class="form-group">
+				<?php echo form_label('Name','name'); ?>
+				<?php echo form_input($name); ?>
 			</div>
-		<div class="col-sm-4">
-				<div class="form-group">
-					<?php echo form_label('Mobile No','mob'); ?>
-					<?php echo form_input($mob); ?>
-				</div>
-			</div>	
-		<div class="col-sm-12">
-			<div class="col-sm-4">
-				<div class="form-group">
-					<?php echo form_label('User','user'); ?>
-					<?php echo form_input($user); ?>
-				</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-offset-3 col-sm-6 col-xs-12">
+			<div class="form-group">
+				<?php echo form_label('Mobile No','mob'); ?>
+				<?php echo form_input($mob); ?>
 			</div>
-			<div class="col-sm-4">
-				<div class="form-group">
-					<?php echo form_label('Password','password'); ?>
-					<?php echo form_input($password); ?>
-				</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-offset-3 col-sm-6 col-xs-12">
+			<div class="form-group">
+				<?php echo form_label('User','user'); ?>
+				<?php echo form_input($user); ?>
 			</div>
-			
-			<div class="col-sm-4">
-				<div class="form-group">
-					<?php echo form_label('Confirm Password','passwordC'); ?>
-					<?php echo form_input($passwordC); ?>
-				</div>
+		</div>
+	</div>
+	<div class="row">			<div class="col-sm-offset-3 col-sm-6 col-xs-12">
+			<div class="form-group">
+				<?php echo form_label('Password','password'); ?>
+				<?php echo form_input($password); ?>
 			</div>
-	    <div class="col-sm-4">
-				<div class="form-group">
-					<?php echo form_label('Country','country'); ?>
-					<?php echo form_input($country); ?>
-				</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-offset-3 col-sm-6 col-xs-12">
+			<div class="form-group">
+				<?php echo form_label('Confirm Password','passwordC'); ?>
+				<?php echo form_input($passwordC); ?>
 			</div>
-		<div class="col-sm-4">
-				<div class="form-group">
-					<?php echo form_label('City','city'); ?>
-					<?php echo form_input($city); ?>
-				</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-offset-3 col-sm-6 col-xs-12">
+			<div class="form-group">
+				<?php echo form_label('Country','country'); ?>
+				<?php echo form_input($country); ?>
 			</div>
-				<div class="col-sm-4">
-				<div class="form-group">
-					<input type="submit" id="submit" value="Submit"/>
-				</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-offset-3 col-sm-6 col-xs-12">
+			<div class="form-group">
+				<?php echo form_label('City','city'); ?>
+				<?php echo form_input($city); ?>
 			</div>
-			
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-offset-3 col-sm-6 col-xs-12">
+
+			<div class="form-group">
+				<?php echo br(1);
+					echo form_submit($addUser); ?>
 			</div>
+		</div>
+
+	</div>
 </div>
-</div>
+
+<?php echo form_close(); ?>
 <script>
 function chkemail()
 		{	val=document.getElementById('user');
