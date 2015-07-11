@@ -157,7 +157,7 @@ echo form_open('validation/validate');
 					<?php echo form_label('Duration','duration'); ?>
 					<select name="duration" id="duration" class="form-control">
 						<option value="">Please Select a duration</option>
-						<option name="five" value="<5 years"> <5 years </option>
+						<option name="five" value="<5 years"><5 years</option>
 						<option name="four" value="<4 years"><3 years</option>
 						<option name="three" value="<3 years"><2 years</option>
 						<option name="two" value="<2 years"><2 years</option>
@@ -186,60 +186,3 @@ if (duration==null) {alert("Please select a duration")};
 if (responsive==null) {alert("Please select a response level")};
 </script>
 <?php echo form_close(); ?>
-<script>
-var name=document.getElementById('name').value;
-if(!name.match(/^[A-Za-z]+$/))
-{
-	alert("ONLY ALPHABETS");
-	document.getElementById('name').value="";
-}
-var nameOfSchool=document.getElementById('nameOfSchool').value;
-if(!nameOfSchool.match(/^[A-Za-z]+$/))
-{
-	alert("ONLY ALPHABETS");
-	document.getElementById('nameOfSchool').value="";
-}
-var cost=document.getElementById('cost').value;
-if(!cost.match(/^[0-9]+$/))
-{
-	alert("ONLY NUMERIC DATA");
-	document.getElementById('cost').value="";
-}
-var presentStudent=document.getElementById('presentStudent').value;
-if(!presentStudent.match(/^[0-9]+$/))
-{
-	alert("ONLY NUMERIC DATA");
-	document.getElementById('presentStudentl').value="";
-}
-var expectedStudent=document.getElementById('expectedStudent').value;
-if(!expectedStudent.match(/^[0-9]+$/))
-{
-	alert("ONLY NUMERIC DATA");
-	document.getElementById('expectedStudent').value="";
-}
-var country=document.getElementById('country').value;
-if(!country.match(/^[A-Za-z]+$/))
-{
-	alert("ONLY ALPHABETS");
-	document.getElementById('country').value="";
-}
-var city=document.getElementById('city').value;
-if(!city.match(/^[A-Za-z]+$/))
-{
-	alert("ONLY ALPHABETS");
-	document.getElementById('city').value="";
-}
-var state=document.getElementById('state').value;
-if(!state.match(/^[A-Za-z]+$/))
-{
-	alert("ONLY ALPHABETS");
-	document.getElementById('state').value="";
-}
-var duration = document.getElementById('duration').value;
-var responsive = document.getElementById('responsive').value;
-var responsive = document.getElementById('responsive').value;
-if (cooperation==null) {alert("Please select a cooperation level")};
-if (duration==null) {alert("Please select a duration")};
-if (responsive==null) {alert("Please select a response level")};
-
-</script>
