@@ -177,4 +177,12 @@ echo form_open('validation/validate');
 		</div>
 	</div>
 </div>
+<script type="text/javascript">var cooperation = document.getElementById('cooperation');
+var duration = document.getElementById('duration');
+var responsive = document.getElementById('responsive');
+
+if (cooperation==null) {alert("Please select a cooperation level")};
+if (duration==null) {alert("Please select a duration")};
+if (responsive==null) {alert("Please select a response level")};
+</script>
 <?php echo form_close(); ?>
