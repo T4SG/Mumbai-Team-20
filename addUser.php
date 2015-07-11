@@ -1,9 +1,23 @@
 <?php
+$name= array(
+		"class" => "form-control col-md-4 col-xs-12",
+		"id" => "name",
+		"name" => "user",
+		"placeholder" => "Enter Name",
+		"autocomplete" => "off"
+	);
+$mob= array(
+		"class" => "form-control col-md-4 col-xs-12",
+		"id" => "mob",
+		"name" => "mob",
+		"placeholder" => "Enter Mobile Number",
+		"autocomplete" => "off"
+	);
 $user= array(
 		"class" => "form-control col-md-4 col-xs-12",
 		"id" => "user",
 		"name" => "user",
-		"placeholder" => "Enter UserName",
+		"placeholder" => "Enter Email",
 		"autocomplete" => "off"
 	);
 $password = array(
@@ -20,11 +34,37 @@ $passwordC = array(
 		"placeholder" => "Enter Password Again",
 		"autocomplete" => "off"
 	);
+$country = array(
+		"class" => "form-control col-md-4 col-xs-12",
+		"id" => "country",
+		"name" => "country",
+		"placeholder" => "Enter Country",
+		"autocomplete" => "off"
+	);
+$city = array(
+		"class" => "form-control col-md-4 col-xs-12",
+		"id" => "city",
+		"name" => "city",
+		"placeholder" => "Enter City",
+		"autocomplete" => "off"
+	);
 	
 ?>
 <div id="page-wrapper">
 
 	<div class="row" style="padding-top: 20px">
+	    <div class="col-sm-4">
+				<div class="form-group">
+					<?php echo form_label('Name','name'); ?>
+					<?php echo form_input($name); ?>
+				</div>
+			</div>
+		<div class="col-sm-4">
+				<div class="form-group">
+					<?php echo form_label('Mobile No','mob'); ?>
+					<?php echo form_input($mob); ?>
+				</div>
+			</div>	
 		<div class="col-sm-12">
 			<div class="col-sm-4">
 				<div class="form-group">
@@ -43,6 +83,18 @@ $passwordC = array(
 				<div class="form-group">
 					<?php echo form_label('Confirm Password','passwordC'); ?>
 					<?php echo form_input($passwordC); ?>
+				</div>
+			</div>
+	    <div class="col-sm-4">
+				<div class="form-group">
+					<?php echo form_label('Country','country'); ?>
+					<?php echo form_input($country); ?>
+				</div>
+			</div>
+		div class="col-sm-4">
+				<div class="form-group">
+					<?php echo form_label('City','city'); ?>
+					<?php echo form_input($city); ?>
 				</div>
 			</div>
 			</div>
@@ -67,7 +119,34 @@ function chkpass()
 				document.getElementById('password').value="";
 			    document.getElementById('passwordC').value="";
 			}
-		}		
+		}	
+var country=document.getElementById('country').value;
+if(!country.match(/^[A-Za-z]+$/))
+{
+	alert("ONLY ALPHABETS");
+	document.getElementById('country').value="";
+}
+var city=document.getElementById('city').value;
+if(!city.match(/^[A-Za-z]+$/))
+{
+	alert("ONLY ALPHABETS");
+	document.getElementById('city').value="";
+}
+var name=document.getElementById('name').value;
+if(!name.match(/^[A-Za-z]+$/))
+{
+	alert("ONLY ALPHABETS");
+	document.getElementById('name').value="";
+}	
+function chkmob()
+{
+	var mob=document.getElementById("mob");
+	var l = mob.length;
+	if(!((l>10 || l<10) && mob.match(/^[0-9]+$/)))
+	{alert("Enter a valid Mobile Numbaer");
+	document.getElementById('mob').value="";
+	}
+}	
 
 
 
