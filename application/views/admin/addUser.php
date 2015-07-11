@@ -186,7 +186,7 @@ function chkmob()
 {
 	var mob=document.getElementById("mob");
 	var l = mob.length;
-	if(!((l>10 || l<10) && mob.match(/^[0-9]+$/)))
+	if((l>=1 || l<=20) && mob.match(/^[0-9]+$/))
 	{alert("Enter a valid Mobile Numbaer");
 	document.getElementById('mob').value="";
 	}

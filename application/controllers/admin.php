@@ -26,7 +26,7 @@ class admin extends CI_Controller{
 			$this->form_validation->set_rules('password','Password','required|trim');
 			if($this->form_validation->run()!=FALSE){
 				$username = $_POST['username'];
-				$password = hash('sha256',md5($_POST['password']));
+				$password = hash('sha256',$_POST['password']);
 				if($username=="" || $password==""){
 					$data['error'] = "Username or Password not entered";
 					$this->load->view('template/msg',$data);
@@ -79,20 +79,20 @@ class admin extends CI_Controller{
 			$this->form_validation->set_rules('name','Name','required|alpha|trim');
 			$this->form_validation->set_rules('user','Username','required|trim|valid_email');
 			$this->form_validation->set_rules('password','Password','required|trim');
-			$this->form_validation->set_rules('Cpassword','Confirm Password','required|trim');
+			$this->form_validation->set_rules('passwordC','Confirm Password','required|trim');
 			$this->form_validation->set_rules('country','Country','required|trim|alpha');
 			$this->form_validation->set_rules('city','City','required|trim|alpha');
 			$this->form_validation->set_rules('mob','Mobile No','required|numeric|trim');
-			if($this->form_validation->set_rules()!=FALSE){
+			if($this->form_validation->run()!=FALSE){
 				$username = $_POST['user'];
 				$name = $_POST['name'];
 				$password = $_POST['password'];
-				$Cpassword = $_POST['Cpassword'];
+				$Cpassword = $_POST['passwordC'];
 				$country = $_POST['country'];
 				$city = $_POST['city'];
 				$mobile = $_POST['mob'];
 				if($password==$Cpassword){
-					$password = hash('sha256',md5($password));
+					$password = hash('sha256',$password);
 					$addUser = array(
 						"name" => $name,
 						"username" => $username,
@@ -155,20 +155,20 @@ class admin extends CI_Controller{
 			$this->form_validation->set_rules('name','Name','required|alpha|trim');
 			$this->form_validation->set_rules('user','Username','required|trim|valid_email');
 			$this->form_validation->set_rules('password','Password','required|trim');
-			$this->form_validation->set_rules('Cpassword','Confirm Password','required|trim');
+			$this->form_validation->set_rules('passwordC','Confirm Password','required|trim');
 			$this->form_validation->set_rules('country','Country','required|trim|alpha');
 			$this->form_validation->set_rules('city','City','required|trim|alpha');
 			$this->form_validation->set_rules('mob','Mobile No','required|numeric|trim');
-			if($this->form_validation->set_rules()!=FALSE){
+			if($this->form_validation->run()!=FALSE){
 				$username = $_POST['user'];
 				$name = $_POST['name'];
 				$password = $_POST['password'];
-				$Cpassword = $_POST['Cpassword'];
+				$Cpassword = $_POST['passwordC'];
 				$country = $_POST['country'];
 				$city = $_POST['city'];
 				$mobile = $_POST['mob'];
 				if($password==$Cpassword){
-					$password = hash('sha256',md5($password));
+					$password = hash('sha256',$password);
 					$addUser = array(
 						"name" => $name,
 						"username" => $username,
@@ -230,7 +230,10 @@ class admin extends CI_Controller{
 		$this->session->unset_userdata('user');
 		session_destroy();
 		$this->load->view('admin/adminLogin');
+	}
 
+	public function dataEvaluation(){
+		$this->load->library('form_validation');
 
 	}
 }
