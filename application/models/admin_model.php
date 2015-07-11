@@ -53,8 +53,10 @@ class admin_model extends CI_Model{
 		extract($evaluation);
 		$sql = "SELECT NoOfStudents,CostOfSchool,Responsiveness,Support,TimeLine,Intake,FreqND,collaborate FROM school";
 		$result = $this->db->query($sql);
-		echo $this->db->last_query();
+		//echo $this->db->last_query();
 			// output data of each row
+		$trun = "truncate table solution";
+		$this->db->query($trun);
 		foreach($result->result_array() as $row) {
 
 				$cost_per_student = ((6000-$row['CostOfSchool']/$row['Intake'])/900)*$ce;
@@ -102,12 +104,14 @@ class admin_model extends CI_Model{
       //  $disr = ($frequency/$frequency_i)*10;
         $coll = ($collaboration/$collaboration_i);
         $suppor = ($support/$support_i)*10;
-        $query1 = "INSERT INTO solu(coste,timee,respc,disr,coll,support) VALUES (?,?,?,?,?,?)";
-		$exe = $this->db->query($query1, array($coste,$time,$respc,0,$coll,$suppor));
-				echo $this->db->last_query();
-
-
-
+        $query1 = "INSERT INTO solution(coste,timee,respc,disr,coll,support,result) VALUES (?,?,?,?,?,?,?)";
+		$exe = $this->db->query($query1, array($coste,$time,$respc,0,$coll,$suppor,$result));
+				//echo $this->db->last_query();
 }
+		$sql = "SELECT s.Name,s.Place,s.Country,so.coste,so.timee,so.respc,so."
+		$exe = $this->db->query($sql);
+		return $exe;
+
+
 	}
 	}
