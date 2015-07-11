@@ -36,6 +36,16 @@ class admin extends CI_Controller{
 						'password' => $password
 					);
 					$flag = $this->admin_model->admin_verify($log);
+					if($flag){
+						$this->load->view('template/header');
+						$this->load->view('admin/adminDashboard');
+						$this->load->view('template/footer');
+					}
+					else{
+						$this->load->view('template/header');
+						$this->load->view('validation/validateForm');
+						$this->load->view('template/footer');
+					}
 				}
 			}
 		}
