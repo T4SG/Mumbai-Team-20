@@ -34,7 +34,7 @@
         ?>
         <div class="col-sm-3" style="float: right; margin: 10px auto">
             <div class="input-group custom-search-form navbar-right">
-                <h3><?php if(isset($user)){echo $user;} ?></h3>
+                <h3><?php if (isset($user)) {echo $user;} ?></h3>
             </div>
             <br>
             <h5>
@@ -67,6 +67,9 @@
                             <li>
                                 <?php echo anchor('', '<i class="fa fa-search fa-fw"></i>Search') ?>
                             </li>
+							<li>
+								<?php echo anchor('', '<i class="fa fa-search fa-fw"></i>Search') ?>
+							</li><li><?php if(isset($_SESSION['user'])) echo anchor('admin/logout', '<i class="fa fa-search fa-fw"></i>Logout'); ?></li>
                         </ul>
                      	   <!-- /.nav-second-level -->
                     </li>

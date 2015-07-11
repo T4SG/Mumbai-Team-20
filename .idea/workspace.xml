@@ -26,8 +26,12 @@
       <file leaf-file-name="header.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/template/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="19" selection-start="1560" selection-end="1560" vertical-scroll-proportion="0.5065177" vertical-offset="340" max-vertical-offset="1938">
-              <folding />
+            <state line="36" column="43" selection-start="1584" selection-end="1584" vertical-scroll-proportion="0.519084" vertical-offset="340" max-vertical-offset="1989">
+              <folding>
+                <element signature="n#style#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1436645363271" expanded="true" signature="3198:3231" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -44,7 +48,7 @@
       <file leaf-file-name="admin.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="29" selection-start="1822" selection-end="1822" vertical-scroll-proportion="-11.5" vertical-offset="721" max-vertical-offset="3808">
+            <state line="41" column="70" selection-start="1210" selection-end="1260" vertical-scroll-proportion="-17.0" vertical-offset="170" max-vertical-offset="4012">
               <folding>
                 <element signature="e#70#158#0" expanded="false" />
               </folding>
@@ -55,7 +59,7 @@
       <file leaf-file-name="adminDashboard.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/admin/adminDashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="6" selection-start="794" selection-end="794" vertical-scroll-proportion="0.0" vertical-offset="194" max-vertical-offset="901">
+            <state line="43" column="6" selection-start="794" selection-end="794" vertical-scroll-proportion="-24.846153" vertical-offset="0" max-vertical-offset="816">
               <folding />
             </state>
           </provider>
@@ -238,8 +242,8 @@
         <option value="$PROJECT_DIR$/application/views/admin/adminLogin.php" />
         <option value="$PROJECT_DIR$/application/models/admin_model.php" />
         <option value="$PROJECT_DIR$/application/views/admin/addUser.php" />
-        <option value="$PROJECT_DIR$/application/controllers/admin.php" />
         <option value="$PROJECT_DIR$/application/views/admin/addAdmin.php" />
+        <option value="$PROJECT_DIR$/application/controllers/admin.php" />
         <option value="$PROJECT_DIR$/application/views/template/header.php" />
       </list>
     </option>
@@ -464,7 +468,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -534,13 +538,6 @@
     <entry file="file://$PROJECT_DIR$/application/views/template/footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="0" selection-start="252" selection-end="310" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="357">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/adminDashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="6" selection-start="794" selection-end="794" vertical-scroll-proportion="0.0" vertical-offset="194" max-vertical-offset="901">
           <folding />
         </state>
       </provider>
@@ -657,6 +654,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/addAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="130" column="46" selection-start="3302" selection-end="3302" vertical-scroll-proportion="-8.230769" vertical-offset="1996" max-vertical-offset="3383">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/adminDashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="6" selection-start="794" selection-end="794" vertical-scroll-proportion="-24.846153" vertical-offset="0" max-vertical-offset="816">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/adminLogin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="4" selection-start="478" selection-end="608" vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="1921">
@@ -681,26 +694,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="29" selection-start="1822" selection-end="1822" vertical-scroll-proportion="-11.5" vertical-offset="721" max-vertical-offset="3808">
+        <state line="41" column="70" selection-start="1210" selection-end="1260" vertical-scroll-proportion="-17.0" vertical-offset="170" max-vertical-offset="4012">
           <folding>
             <element signature="e#70#158#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/addAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="46" selection-start="3302" selection-end="3302" vertical-scroll-proportion="-8.230769" vertical-offset="1996" max-vertical-offset="3383">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/template/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="19" selection-start="1560" selection-end="1560" vertical-scroll-proportion="0.5065177" vertical-offset="340" max-vertical-offset="1938">
-          <folding />
+        <state line="36" column="43" selection-start="1584" selection-end="1584" vertical-scroll-proportion="0.519084" vertical-offset="340" max-vertical-offset="1989">
+          <folding>
+            <element signature="n#style#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1436645363271" expanded="true" signature="3198:3231" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

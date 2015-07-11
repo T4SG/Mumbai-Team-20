@@ -11,6 +11,7 @@ class admin extends CI_Controller{
 	public function __construct(){
 		parent:: __construct();
 		$this->load->model('admin_model');
+		$this->load->library('session');
 	}
 
 	public function index(){
@@ -18,6 +19,7 @@ class admin extends CI_Controller{
 	}
 
 	public function adminAuthenticate(){
+		$this->load->library('session');
 		$this->load->library('form_validation');
 		if(isset($_POST['login'])){
 			$this->form_validation->set_rules('username','Username','required|valid_email|trim');
@@ -37,6 +39,7 @@ class admin extends CI_Controller{
 					);
 					$status = $this->admin_model->admin_verify($log);
 					if($status){
+						$this->session->set_userdata('user', '$username');
 						$data['user'] = "$username";
 						$this->load->view('template/header',$data);
 						$this->load->view('admin/adminDashboard');
@@ -220,5 +223,14 @@ class admin extends CI_Controller{
 			$this->load->view('admin/addAdmin');
 			$this->load->view('template/footer');
 		}
+	}
+
+	public function logout(){
+		$this->load->library('session');
+		$this->session->unset_userdata('user');
+		session_destroy();
+		$this->load->view('admin/adminLogin');
+
+
 	}
 }
