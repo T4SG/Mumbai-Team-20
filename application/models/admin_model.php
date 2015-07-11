@@ -13,4 +13,11 @@ class admin_model extends CI_Model{
 		$this->load->helper('form');
 	}
 
+	public function admin_verify($log){
+		extract($log);
+		$sql = "SELECT flag FROM user WHERE username = '$username' AND password = '$password'";
+		$query = mysql_query($sql);
+		
+	}
+
 } 

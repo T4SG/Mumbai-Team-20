@@ -18,7 +18,30 @@ class admin extends CI_Controller{
 	}
 
 	public function adminAuthenticate(){
-		$this->load->view('admin/adminLogin');
+		$this->load->library('form_validation');
+		if(isset($_POST['login'])){
+			$this->form_validation->set_rules('username','Username','required|valid_email|xss-client|trim');
+			$this->form_validation->set_rules('password','Password','required|trim');
+			if($this->form_validation->run()!=FALSE){
+				$username = $_POST['username'];
+				$password = hash('sha256',md5($_POST['password']));
+				if($username=="" || $password==""){
+					$data['error'] = "Username or Password not entered";
+					$this->load->view('template/msg',$data);
+					$this->load->view('admin/adminLogin');
+				}
+				else{
+					$log = array(
+						'username' => $username,
+						'password' => $password
+					);
+					$flag = $this->admin_model->admin_verify($log);
+				}
+			}
+		}
+		else{
+			$this->load->view('admin/adminLogin');
+		}
 
 	}
 
