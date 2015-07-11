@@ -15,7 +15,12 @@ class validation_model extends CI_Model{
 
 	public function validate($valid){
 		extract($valid);
-		
+		if($name==null && $nameOfSchool==null && $cost==null && $duration==null && $cooperation==null && $responsive==null && $expectedStudent==null && $presentStudent==null && $country==null && $state==null && $city==null){
+			return FALSE;
+		}
+		else{
+			$query = ""
+		}
 	}
 
 } 
