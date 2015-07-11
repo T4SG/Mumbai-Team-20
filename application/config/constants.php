@@ -19,6 +19,12 @@ define('FILE_WRITE_MODE', 0666);
 define('DIR_READ_MODE', 0755);
 define('DIR_WRITE_MODE', 0755);
 
+define('URL', 'http://localhost/Mumbai-Team-20/');
+define('CSS', 'http://localhost/Mumbai-Team-20/assets/css/');
+define('JS',  'http://localhost/Mumbai-Team-20/assets/js/');
+define('IMAGES',  'http://localhost/Mumbai-Team-20/assets/images/');
+define('ASSET',  'http://localhost/Mumbai-Team-20/assets/');
+
 /*
 |--------------------------------------------------------------------------
 | File Stream Modes
