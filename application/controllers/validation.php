@@ -8,6 +8,11 @@
 
 class validation extends CI_Controller{
 
+	public function __construct(){
+		parent:: __construct();
+		$this->load->model('validation_model');
+	}
+
 	public function index(){
 		$this->validate();
 	}
@@ -39,7 +44,21 @@ class validation extends CI_Controller{
 				$responsive = $_POST['responsive'];
 				$cooperation = $_POST['cooperation'];
 
-				$validate = array();
+				$validate = array(
+					'name' => $name,
+					'nameOfSchool' => $nameOfSchool,
+					'country' => $country,
+					'state' => $state,
+					'city' => $city,
+					'cost' => $cost,
+					'presentStudent' => $presentStudent,
+					'expectedStudent' => $expectedStudent,
+					'duration' => $duration,
+					'responsive' => $responsive,
+					'cooperation' => $cooperation
+				);
+
+				$query = $this->validation_model->validate($validate);
 
 			}
 		}
