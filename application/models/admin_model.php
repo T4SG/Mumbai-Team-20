@@ -108,7 +108,7 @@ class admin_model extends CI_Model{
 		$exe = $this->db->query($query1, array($coste,$time,$respc,0,$coll,$suppor,$result));
 				//echo $this->db->last_query();
 }
-		$sql = "SELECT s.Name,s.Place,s.Country,so.coste,so.timee,so.respc,so."
+		$sql = "SELECT s.Name,s.Place,s.Country,so.coste,so.timee,so.respc,so.disr,so.coll,so.support,so.result FROM school s,solution so WHERE s.Sr= so.Sr";
 		$exe = $this->db->query($sql);
 		return $exe;
 
