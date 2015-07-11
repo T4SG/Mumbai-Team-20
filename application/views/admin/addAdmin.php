@@ -3,6 +3,7 @@ $name= array(
 		"class" => "form-control col-md-4 col-xs-12",
 		"id" => "name",
 		"name" => "user",
+		"onblur"=>"name(this.value)",
 		"placeholder" => "Enter Name",
 		"autocomplete" => "off"
 	);
@@ -10,6 +11,7 @@ $mob= array(
 		"class" => "form-control col-md-4 col-xs-12",
 		"id" => "mob",
 		"name" => "mob",
+		"onblur"=>"chkmob(this.value)",
 		"placeholder" => "Enter Mobile Number",
 		"autocomplete" => "off"
 	);
@@ -17,6 +19,7 @@ $user= array(
 		"class" => "form-control col-md-4 col-xs-12",
 		"id" => "user",
 		"name" => "user",
+		"onblur"=>"chkemail(this.value)",
 		"placeholder" => "Enter Email",
 		"autocomplete" => "off"
 	);
@@ -32,6 +35,7 @@ $passwordC = array(
 		"id" => "passwordC",
 		"name" => "passwordC",
 		"placeholder" => "Enter Password Again",
+		"onblur"=>"chkpass(this.value)",
 		"autocomplete" => "off"
 	);
 $country = array(
@@ -39,6 +43,7 @@ $country = array(
 		"id" => "country",
 		"name" => "country",
 		"placeholder" => "Enter Country",
+		"onblur"=>"country()",
 		"autocomplete" => "off"
 	);
 $city = array(
@@ -46,6 +51,7 @@ $city = array(
 		"id" => "city",
 		"name" => "city",
 		"placeholder" => "Enter City",
+		"onblur"=>"city()",
 		"autocomplete" => "off"
 	);
 	
@@ -91,12 +97,18 @@ $city = array(
 					<?php echo form_input($country); ?>
 				</div>
 			</div>
-		div class="col-sm-4">
+		<div class="col-sm-4">
 				<div class="form-group">
 					<?php echo form_label('City','city'); ?>
 					<?php echo form_input($city); ?>
 				</div>
 			</div>
+				<div class="col-sm-4">
+				<div class="form-group">
+					<input type="submit" id="submit" value="Submit"/>
+				</div>
+			</div>
+			
 			</div>
 </div>
 </div>
@@ -120,24 +132,32 @@ function chkpass()
 			    document.getElementById('passwordC').value="";
 			}
 		}	
+function country()
+{
 var country=document.getElementById('country').value;
 if(!country.match(/^[A-Za-z]+$/))
 {
 	alert("ONLY ALPHABETS");
 	document.getElementById('country').value="";
 }
+}
+function city()
+{
 var city=document.getElementById('city').value;
 if(!city.match(/^[A-Za-z]+$/))
 {
 	alert("ONLY ALPHABETS");
 	document.getElementById('city').value="";
 }
-var name=document.getElementById('name').value;
+}
+function name(name)
+{
 if(!name.match(/^[A-Za-z]+$/))
 {
 	alert("ONLY ALPHABETS");
 	document.getElementById('name').value="";
 }	
+}
 function chkmob()
 {
 	var mob=document.getElementById("mob");
@@ -147,12 +167,4 @@ function chkmob()
 	document.getElementById('mob').value="";
 	}
 }	
-
-
-
-
-
-
-
-
 </script>

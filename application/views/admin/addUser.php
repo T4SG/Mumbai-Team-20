@@ -3,6 +3,7 @@ $name= array(
 		"class" => "form-control col-md-4 col-xs-12",
 		"id" => "name",
 		"name" => "name",
+		"onblur"=>"name(this.value)",
 		"placeholder" => "Enter Name",
 		"autocomplete" => "off"
 	);
@@ -10,6 +11,7 @@ $mob= array(
 		"class" => "form-control col-md-4 col-xs-12",
 		"id" => "mob",
 		"name" => "mob",
+		"onblur"=>"chkmob()",
 		"placeholder" => "Enter Mobile Number",
 		"autocomplete" => "off"
 	);
@@ -18,6 +20,7 @@ $user= array(
 		"id" => "user",
 		"name" => "user",
 		"placeholder" => "Enter Email",
+		"onblur"=>"chkemail()",
 		"autocomplete" => "off"
 	);
 $password = array(
@@ -31,6 +34,7 @@ $passwordC = array(
 		"class" => "form-control col-md-4 col-xs-12",
 		"id" => "passwordC",
 		"name" => "passwordC",
+		"onblur"=>"chkpass()",
 		"placeholder" => "Enter Password Again",
 		"autocomplete" => "off"
 	);
@@ -38,6 +42,7 @@ $country = array(
 		"class" => "form-control col-md-4 col-xs-12",
 		"id" => "country",
 		"name" => "country",
+		"onblur"=>"country()",
 		"placeholder" => "Enter Country",
 		"autocomplete" => "off"
 	);
@@ -45,6 +50,7 @@ $city = array(
 		"class" => "form-control col-md-4 col-xs-12",
 		"id" => "city",
 		"name" => "city",
+		"onblur"=>"city()",
 		"placeholder" => "Enter City",
 		"autocomplete" => "off"
 	);
@@ -114,16 +120,19 @@ $city = array(
 					</div>
 				</div>
 			</div>
+
 		<div class="row">
 			<div class="col-sm-offset-3 col-sm-6 col-xs-12">
+
 				<div class="form-group">
 					<?php echo br(1);
 						echo form_submit($addUser); ?>
 				</div>
 			</div>
+
 		</div>
 		</div>
-	</div>
+
 <?php echo form_close(); ?>
 
 <script>
@@ -146,24 +155,32 @@ function chkpass()
 			    document.getElementById('passwordC').value="";
 			}
 		}	
-var country=document.getElementById('country').value;
-if(!country.match(/^[A-Za-z]+$/))
+function city()
 {
-	alert("ONLY ALPHABETS");
-	document.getElementById('country').value="";
-}
 var city=document.getElementById('city').value;
 if(!city.match(/^[A-Za-z]+$/))
 {
 	alert("ONLY ALPHABETS");
 	document.getElementById('city').value="";
 }
-var name=document.getElementById('name').value;
+}
+function country()
+{
+var country=document.getElementById('country').value;
+if(!country.match(/^[A-Za-z]+$/))
+{
+	alert("ONLY ALPHABETS");
+	document.getElementById('country').value="";
+}
+}
+function name(name)
+{
 if(!name.match(/^[A-Za-z]+$/))
 {
 	alert("ONLY ALPHABETS");
 	document.getElementById('name').value="";
 }	
+}
 function chkmob()
 {
 	var mob=document.getElementById("mob");
