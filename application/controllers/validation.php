@@ -12,4 +12,10 @@ class validation extends CI_Controller{
 		$this->load->view('template/header');
 	}
 
+	public function validate(){
+		$this->load->view('template/header');
+		$this->load->view('validation/validateForm');
+		$this->load->view('template/footer');
+	}
+
 } 

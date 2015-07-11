@@ -1,155 +1,114 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: thadaninilesh
- * Date: 11/7/15
- * Time: 3:37 PM
- */
-?>
+<!DOCTYPE html>
 <html>
+
 <head>
-	<link href="<?php echo CSS . "bootstrap.min.css"; ?>" rel="stylesheet">
-	<link href="<?php echo CSS . "animate.min.css"; ?>" rel="stylesheet">
-	<link href="<?php echo CSS . "custom.css"; ?>" rel="stylesheet">
-	<link href="<?php echo ASSET . "fonts/css/font-awesome.min.css"; ?>" rel="stylesheet">
-	<link href="<?php echo CSS . "icheck/flat/green.css"; ?>" rel="stylesheet">
-	<script src="<?php echo JS . "jquery.min.js"; ?>"></script>
-	<script src="<?php echo JS . "bootstrap.min.js"; ?>"></script>
-	<script src="<?php echo JS . "custom.js"; ?>"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Hearts Fund</title>
+    <!-- Core CSS - Include with every page -->
+	<link href="<?php echo CSS . "bootstrap.css"; ?>" rel="stylesheet">
+	<link href="<?php echo ASSET . "font-awesome/css/font-awesome.css"; ?>" rel="stylesheet">
+	<script src="<?php echo JS . "jquery-1.11.3.js"; ?>"></script>
+              <!-- SB Admin CSS - Include with every page -->
+	<link href="<?php echo CSS . "sb-admin.css"; ?>" rel="stylesheet">
 </head>
-<body class="nav-md">
+<body style="font-family: Times New Roman, Times, serif">
 
-<div class="container body">
-
-
-<div class="main_container">
-
-<div class="col-md-3 left_col">
-	<div class="left_col scroll-view">
-
-		<div class="navbar nav_title" style="border: 0;">
-			<a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>HHF</span></a>
+    <div id="wrapper">
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+		<div class="col-sm-12">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <h2>Happy Hearts fund</h2>
+            </div>
+            <!-- /.navbar-header -->
+<!--Search By ID-->
+        <?php
+           // echo form_open('searchdatabase_control/find_id');
+        ?>
+        <div class="col-sm-3" style="float: right; margin: 10px auto">
+            <div class="input-group custom-search-form navbar-right">
+                <input type="int" name="member_id" class="form-control" placeholder="Search By Member ID only!" style="height: 30px">
+                    <span class="input-group-btn" name="id_search">
+                        <button class="btn btn-default" type="submit" name="id_search" style="height: 30px">
+                            <b></b><i class="fa fa-search" name="id_search"></i></b>
+                        </button>
+                    </span>
+            </div>
+            <br>
+            <h5>
+                <?php
+                //$str = "Advanced Search";
+               // echo anchor("searchdatabase_control/find_members",$str); ?>
+            </h5>
+        </div>
+            <?php
+                //echo form_close();
+            ?>
 		</div>
-		<div class="clearfix"></div>
 
-		<!-- menu prile quick info -->
-		<div class="profile">
-			<div class="profile_pic">
-				<img src="images/img.jpg" alt="..." class="img-circle profile_img">
-			</div>
-			<div class="profile_info">
-				<span>Welcome,</span>
-				<h2>Happy Hearts Fund</h2>
-			</div>
-		</div>
-		<!-- /menu prile quick info -->
-
-		<br />
-
-		<!-- sidebar menu -->
-		<div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-
-			<div class="menu_section">
-				<h3>General</h3>
-				<ul class="nav side-menu">
-					<li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
-						<ul class="nav child_menu" style="display: none">
-							<li><a href="index.html">Dashboard</a>
-							</li>
-							<li><a href="index2.html">Dashboard2</a>
-							</li>
-							<li><a href="index3.html">Dashboard3</a>
-							</li>
-						</ul>
-					</li>
-					<li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
-						<ul class="nav child_menu" style="display: none">
-							<li><a href="form.html">General Form</a>
-							</li>
-							<li><a href="form_advanced.html">Advanced Components</a>
-							</li>
-							<li><a href="form_validation.html">Form Validation</a>
-							</li>
-							<li><a href="form_wizards.html">Form Wizard</a>
-							</li>
-							<li><a href="form_upload.html">Form Upload</a>
-							</li>
-							<li><a href="form_buttons.html">Form Buttons</a>
-							</li>
-						</ul>
-					</li>
-					<li><a><i class="fa fa-desktop"></i> UI Elements <span class="fa fa-chevron-down"></span></a>
-						<ul class="nav child_menu" style="display: none">
-							<li><a href="general_elements.html">General Elements</a>
-							</li>
-							<li><a href="media_gallery.html">Media Gallery</a>
-							</li>
-							<li><a href="typography.html">Typography</a>
-							</li>
-							<li><a href="icons.html">Icons</a>
-							</li>
-							<li><a href="glyphicons.html">Glyphicons</a>
-							</li>
-							<li><a href="widgets.html">Widgets</a>
-							</li>
-							<li><a href="invoice.html">Invoice</a>
-							</li>
-							<li><a href="inbox.html">Inbox</a>
-							</li>
-							<li><a href="calender.html">Calender</a>
-							</li>
-						</ul>
-					</li>
-					<li><a><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
-						<ul class="nav child_menu" style="display: none">
-							<li><a href="tables.html">Tables</a>
-							</li>
-							<li><a href="tables_dynamic.html">Table Dynamic</a>
-							</li>
-						</ul>
-					</li>
-					<li><a><i class="fa fa-bar-chart-o"></i> Data Presentation <span class="fa fa-chevron-down"></span></a>
-						<ul class="nav child_menu" style="display: none">
-							<li><a href="chartjs.html">Chart JS</a>
-							</li>
-							<li><a href="chartjs2.html">Chart JS2</a>
-							</li>
-							<li><a href="morisjs.html">Moris JS</a>
-							</li>
-							<li><a href="echarts.html">ECharts </a>
-							</li>
-							<li><a href="other_charts.html">Other Charts </a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-
-		</div>
-		<!-- /sidebar menu -->
-
-
-	</div>
-</div>
-
-<!-- top navigation -->
-<div class="top_nav">
-
-	<div class="nav_menu">
-		<nav class="" role="navigation">
-			<ul class="nav navbar-nav navbar-right">
-				<li class="">
-					<h1>Happy Hearts Fund</h1>
-				</li>
-
-				<li role="presentation" class="dropdown">
-
-					</ul>
-				</li>
-
-			</ul>
+		<!--Search By ID ends-->
 		</nav>
-	</div>
+    </div>
 
-</div>
-<!-- /top navigation -->
+    <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li>
+                        <a href="#"><i class="fa fa-users fa-fw"></i>Seek Help<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+								<?php echo anchor('validation/validate','<i class="fa fa-user fa-fw"></i>Send Request');		 ?>
+                            </li>
+                            <li>
+                                <?php echo anchor('','<i class="fa fa-list fa-fw"></i>Member') ?>
+                            </li>
+                            <li>
+                                <?php echo anchor('', '<i class="fa fa-search fa-fw"></i>Search') ?>
+                            </li>
+                        </ul>
+                     	   <!-- /.nav-second-level -->
+                    </li>
+                    
+                    <li>
+                        <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#">Second Level Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Second Level Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Third Level <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="#">Third Level Item</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Third Level Item</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Third Level Item</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Third Level Item</a>
+                                    </li>
+                                </ul>
+                                <!-- /.nav-third-level -->
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+
+                </ul>
+                <!-- /#side-menu -->
+            </div>
+            <!-- /.sidebar-collapse -->
+        </nav>
