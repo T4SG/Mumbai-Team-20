@@ -13,6 +13,14 @@ class admin_model extends CI_Model{
 		$this->load->helper('form');
 	}
 
+	public function schools(){
+		$sql = "SELECT Sr FROM school";
+		$query = $this->db->query($sql);
+		//$rows = mysql_num_rows($query);
+		$rows = $query->num_rows();
+		return $rows;
+	}
+
 	public function admin_verify($log){
 		extract($log);
 		$sql = "SELECT status FROM user WHERE Email = '$username' AND Password = '$password'";
@@ -110,7 +118,7 @@ class admin_model extends CI_Model{
 }
 		$sql = "SELECT s.Name,s.Place,s.State,s.Country,so.coste,so.timee,so.respc,so.disr,so.coll,so.support,so.result FROM school s,solution so WHERE s.Sr= so.Sr order by so.result desc";
 		$exe = $this->db->query($sql);
-		echo $this->db->last_query();
+		//echo $this->db->last_query();
 		return $exe;
 
 

@@ -21,6 +21,7 @@ class admin extends CI_Controller{
 	public function adminAuthenticate(){
 		$this->load->library('session');
 		$this->load->library('form_validation');
+		$data['schools'] = $this->admin_model->schools();
 		if(isset($_POST['login'])){
 			$this->form_validation->set_rules('username','Username','required|valid_email|trim');
 			$this->form_validation->set_rules('password','Password','required|trim');
@@ -42,7 +43,7 @@ class admin extends CI_Controller{
 						$this->session->set_userdata('user', '$username');
 						$data['user'] = "$username";
 						$this->load->view('template/header',$data);
-						$this->load->view('admin/adminDashboard');
+						$this->load->view('admin/adminDashboard',$data);
 						$this->load->view('template/footer');
 					}
 					else{
@@ -77,6 +78,7 @@ class admin extends CI_Controller{
 	}
 
 	public function addUser(){
+		$data['schools'] = $this->admin_model->schools();
 		$this->load->library('form_validation');
 		if(isset($_POST['addUser'])){
 			$this->form_validation->set_rules('name','Name','required|alpha|trim');
@@ -117,7 +119,7 @@ class admin extends CI_Controller{
 							$data['success'] = $user;
 							$this->load->view('template/header');
 							$this->load->view('template/msg');
-							$this->load->view('admin/adminDashboard');
+							$this->load->view('admin/adminDashboard',$data);
 							$this->load->view('template/footer');
 						}
 						else{
@@ -153,6 +155,7 @@ class admin extends CI_Controller{
 	}
 
 	public function addAdmin(){
+		$data['schools'] = $this->admin_model->schools();
 		$this->load->library('form_validation');
 		if(isset($_POST['addUser'])){
 			$this->form_validation->set_rules('name','Name','required|alpha|trim');
@@ -193,7 +196,7 @@ class admin extends CI_Controller{
 							$data['success'] = $user;
 							$this->load->view('template/header');
 							$this->load->view('template/msg');
-							$this->load->view('admin/adminDashboard');
+							$this->load->view('admin/adminDashboard',$data);
 							$this->load->view('template/footer');
 						}
 						else{

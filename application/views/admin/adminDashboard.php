@@ -60,6 +60,11 @@
 			</div>
 		</div>
 	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<h3>Number of school entries = <?php echo $schools; ?></h3>
+		</div>
+	</div>
 </div>
 
 
