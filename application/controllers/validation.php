@@ -32,6 +32,7 @@ class validation extends CI_Controller{
 			$this->form_validation->set_rules('collaborate','Collaboration','required');
 			$this->form_validation->set_rules('support','Support','required');
 			$this->form_validation->set_rules('responsive','Responsive','required');
+			$this->form_validation->set_rules('freqnd','Frequency','required');
 			if($this->form_validation->run()!=FALSE){
 				$name = $_POST['name'];
 				$nameOfSchool = $_POST['nameOfSchool'];
@@ -45,6 +46,7 @@ class validation extends CI_Controller{
 				$responsive = $_POST['responsive'];
 				$support = $_POST['support'];
 				$collaborate = $_POST['collaborate'];
+				$freqnd = $_POST['freqnd'];
 
 				$validate = array(
 					'name' => $name,
@@ -58,24 +60,16 @@ class validation extends CI_Controller{
 					'duration' => $duration,
 					'responsive' => $responsive,
 					'collaborate' => $collaborate,
-					'support' => $support
+					'support' => $support,
+					'freqnd' => $freqnd
 				);
 
 				$query = $this->validation_model->validate($validate);
-				if($query==FALSE){
-					$data['error'] = "Error! Please Try Again.";
-					$this->load->view('template/header');
-					$this->load->view('template/msg',$data);
-					$this->load->view('validation/validateForm');
-					$this->load->view('template/footer');
-				}
-				else{
 					$data['success'] = $query;
 					$this->load->view('template/header');
 					$this->load->view('template/msg',$data);
 					$this->load->view('validation/validateForm');
 					$this->load->view('template/footer');
-				}
 			}
 		}
 		else{
@@ -84,5 +78,9 @@ class validation extends CI_Controller{
 			$this->load->view('template/footer');
 		}
 	}
-
-} 
+				 public function maps(){
+					$this->load->view('template/header');
+				//	$this->load->view('template/maps');
+					$this->load->view('template/footer');
+ 				}
+}

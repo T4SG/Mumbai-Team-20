@@ -15,12 +15,13 @@ class admin extends CI_Controller{
 	}
 
 	public function index(){
-		$this->adminAuthenticate();
+		$this->contact();
 	}
 
 	public function adminAuthenticate(){
 		$this->load->library('session');
 		$this->load->library('form_validation');
+		$data['schools'] = $this->admin_model->schools();
 		if(isset($_POST['login'])){
 			$this->form_validation->set_rules('username','Username','required|valid_email|trim');
 			$this->form_validation->set_rules('password','Password','required|trim');
@@ -42,7 +43,7 @@ class admin extends CI_Controller{
 						$this->session->set_userdata('user', '$username');
 						$data['user'] = "$username";
 						$this->load->view('template/header',$data);
-						$this->load->view('admin/adminDashboard');
+						$this->load->view('admin/adminDashboard',$data);
 						$this->load->view('template/footer');
 					}
 					else{
@@ -77,6 +78,7 @@ class admin extends CI_Controller{
 	}
 
 	public function addUser(){
+		$data['schools'] = $this->admin_model->schools();
 		$this->load->library('form_validation');
 		if(isset($_POST['addUser'])){
 			$this->form_validation->set_rules('name','Name','required|alpha|trim');
@@ -117,7 +119,7 @@ class admin extends CI_Controller{
 							$data['success'] = $user;
 							$this->load->view('template/header');
 							$this->load->view('template/msg');
-							$this->load->view('admin/adminDashboard');
+							$this->load->view('admin/adminDashboard',$data);
 							$this->load->view('template/footer');
 						}
 						else{
@@ -153,6 +155,7 @@ class admin extends CI_Controller{
 	}
 
 	public function addAdmin(){
+		$data['schools'] = $this->admin_model->schools();
 		$this->load->library('form_validation');
 		if(isset($_POST['addUser'])){
 			$this->form_validation->set_rules('name','Name','required|alpha|trim');
@@ -193,7 +196,7 @@ class admin extends CI_Controller{
 							$data['success'] = $user;
 							$this->load->view('template/header');
 							$this->load->view('template/msg');
-							$this->load->view('admin/adminDashboard');
+							$this->load->view('admin/adminDashboard',$data);
 							$this->load->view('template/footer');
 						}
 						else{
@@ -241,18 +244,18 @@ class admin extends CI_Controller{
 			$this->form_validation->set_rules('ce','Cost','required|numeric');
 			$this->form_validation->set_rules('tr','Time','required|numeric');
 			$this->form_validation->set_rules('rr','Responsiveness','required|numeric');
-			$this->form_validation->set_rules('dr','Distance','required|numeric');
+			$this->form_validation->set_rules('fr','Distance','required|numeric');
 			$this->form_validation->set_rules('cr','Collaboration','required|numeric');
 			$this->form_validation->set_rules('sr','Support','required|numeric');
 			if($this->form_validation->run()!=FALSE){
 				$ce = $_POST['ce'];
 				$tr = $_POST['tr'];
 				$rr = $_POST['rr'];
-				$dr = $_POST['dr'];
+				$fr = $_POST['fr'];
 				$cr = $_POST['cr'];
 				$sr = $_POST['sr'];
 
-				if($ce=="" || $tr=="" || $rr=="" || $dr=="" || $cr=="" || $sr==""){
+				if($ce=="" || $tr=="" || $rr=="" || $fr=="" || $cr=="" || $sr==""){
 					$data['error'] = "All fields are required";
 					$this->load->view('template/header');
 					$this->load->view('template/msg',$data);
@@ -264,7 +267,7 @@ class admin extends CI_Controller{
 						"ce" => $ce,
 						"tr" => $tr,
 						"rr" => $rr,
-						"dr" => $dr,
+						"fr" => $fr,
 						"cr" => $cr,
 						"sr" => $sr
 					);
@@ -287,6 +290,49 @@ class admin extends CI_Controller{
 		else{
 			$this->load->view('template/header');
 			$this->load->view('admin/dataEvalve');
+			$this->load->view('template/footer');
+		}
+	}
+
+	public function contact(){
+		$this->load->library('form_validation');
+		if(isset($_POST['submit'])){
+			$this->form_validation->set_rules('name','Name','required');
+			$this->form_validation->set_rules('email','Email','required|valid_email');
+			$this->form_validation->set_rules('area','TextArea','required');
+			if($this->form_validation->run()!=FALSE){
+				$name = $_POST['name'];
+				$email = $_POST['email'];
+				$area = $_POST['area'];
+
+				$contact = array(
+					'name' => $name,
+					'email' => $email,
+					'area' => $area
+				);
+				$give = $this->admin_model->contactus($contact);
+				if(isset($give)){
+					$data['success'] = "Message sent";
+					$this->load->view('template/msg',$data);
+					$this->load->view('template/contact');
+					$this->load->view('template/footer');
+				}
+				else{
+					$data['warning'] = "Message not sent";
+					$this->load->view('template/msg',$data);
+					$this->load->view('template/contact');
+					$this->load->view('template/footer');
+				}
+			}
+			else{
+				$data['error'] = "Message not sent";
+				$this->load->view('template/msg',$data);
+				$this->load->view('template/contact');
+				$this->load->view('template/footer');
+			}
+		}
+		else{
+			$this->load->view('template/contact');
 			$this->load->view('template/footer');
 		}
 	}

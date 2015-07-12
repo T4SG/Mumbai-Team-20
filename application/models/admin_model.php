@@ -13,6 +13,14 @@ class admin_model extends CI_Model{
 		$this->load->helper('form');
 	}
 
+	public function schools(){
+		$sql = "SELECT Sr FROM school";
+		$query = $this->db->query($sql);
+		//$rows = mysql_num_rows($query);
+		$rows = $query->num_rows();
+		return $rows;
+	}
+
 	public function admin_verify($log){
 		extract($log);
 		$sql = "SELECT status FROM user WHERE Email = '$username' AND Password = '$password'";
@@ -76,7 +84,7 @@ class admin_model extends CI_Model{
 			$support = 0;
         $support_i = 10*$sr;
 
-        /*if($row['FreqND']>=75)
+        if($row['FreqND']>=75)
 			$frequency = 2.5*$fr;
 		else if ($row['FreqND']<75 && $row['FreqND']>50)
 			$frequency = 5*$fr;
@@ -86,7 +94,6 @@ class admin_model extends CI_Model{
 			$frequency = 10*$fr;
 
         $frequency_i = 10*$fr;
-*/
         if($row['collaborate']=="NGO")
         $collaboration = 10*$cr;
         else if($row['collaborate']=="CORPORATE")
@@ -95,7 +102,7 @@ class admin_model extends CI_Model{
         $collaboration = 5*$cr;
         $collaboration_i = 10*$cr;
 
-        $result = ($cost_per_student + $timeline + $responsiveness + $support /*+ $frequency*/ + $collaboration )/($cost_per_student_i + $timeline_i + $responsiveness_i + $support_i + /*$frequency_i +*/ $collaboration_i)*100 ;
+        $result = ($cost_per_student + $timeline + $responsiveness + $support + $frequency + $collaboration )/($cost_per_student_i + $timeline_i + $responsiveness_i + $support_i + $frequency_i + $collaboration_i)*100 ;
 
 
         $coste =  ($cost_per_student/$cost_per_student_i)*10;
@@ -105,14 +112,19 @@ class admin_model extends CI_Model{
         $coll = ($collaboration/$collaboration_i);
         $suppor = ($support/$support_i)*10;
         $query1 = "INSERT INTO solution(coste,timee,respc,disr,coll,support,result) VALUES (?,?,?,?,?,?,?)";
-		$exe = $this->db->query($query1, array($coste,$time,$respc,0,$coll,$suppor,$result));
+		$exe = $this->db->query($query1, array($coste,$time,$respc,$frequency,$coll,$suppor,$result));
 				//echo $this->db->last_query();
 }
 		$sql = "SELECT s.Name,s.Place,s.State,s.Country,so.coste,so.timee,so.respc,so.disr,so.coll,so.support,so.result FROM school s,solution so WHERE s.Sr= so.Sr order by so.result desc";
 		$exe = $this->db->query($sql);
-		echo $this->db->last_query();
+		//echo $this->db->last_query();
 		return $exe;
-
-
 	}
+
+	public function contactus($contact){
+		extract($contact);
+		$query = "INSERT INTO contact(name,email,area) VALUES(?,?,?)";
+		$sql = $this->db->query($query, array($name,$email,$area));
+		return TRUE;
 	}
+}

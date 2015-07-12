@@ -31,7 +31,7 @@
 	);
 	$disr = array(
 		"id" => "disr",
-		"name" => "dr",
+		"name" => "fr",
 		"placeholder" => "Distance Importance",
 		"maxlength" => "50",
 		"class" => "form-control element-width-3",
@@ -61,7 +61,12 @@
 	);
 	echo form_open('admin/dataEvaluation');
 ?>
-
+<div id="page-wrapper">
+	<div class="row">
+		<div class="col-sm-12">
+			<h1 class="page-header" style="margin-top: 10px">Data Evaluation Parameters</h1>
+		</div>
+	</div>
 <div class="row">
 	<div class="col-sm-12">
 		<div class="col-sm-6">
@@ -123,3 +128,4 @@
 </div>
 <?php echo form_close(); ?>
 
+</div>

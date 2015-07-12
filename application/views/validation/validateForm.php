@@ -69,6 +69,14 @@
 		"autocomplete" => "off"
 	);
 
+	$freqnd = array(
+		"class" => "form-control col-md-4 col-xs-12",
+		"id" => "freqid",
+		"name" => "freqid",
+		"placeholder" => "Scale 1-100",
+		"autocomplete" => "off"
+	);
+
 	$submit = array(
 		"name" => "submit",
 		"id" => "submit",
@@ -79,6 +87,11 @@
 echo form_open('validation/validate');
 ?>
 <div id="page-wrapper">
+	<div class="row">
+		<div class="col-sm-12">
+			<h1 class="page-header" style="margin-top: 10px">School Rebuilding Entries</h1>
+		</div>
+	</div>
 
 	<div class="row" style="padding-top: 20px">
 		<div class="col-sm-12">
@@ -141,7 +154,7 @@ echo form_open('validation/validate');
 					</select>
 				</div>
 			</div>
-			<div class="col-sm-4">
+			<div class="col-sm-3">
 				<div class="form-group">
 					<?php echo form_label('Support','cooperation'); ?>
 					<select name="support" id="cooperation" class="form-control">
@@ -152,7 +165,7 @@ echo form_open('validation/validate');
 					</select>
 				</div>
 			</div>
-			<div class="col-sm-4">
+			<div class="col-sm-3">
 				<div class="form-group">
 					<?php echo form_label('Duration','duration'); ?>
 					<select name="duration" id="duration" class="form-control">
@@ -165,7 +178,7 @@ echo form_open('validation/validate');
 					</select>
 				</div>
 			</div>
-			<div class="col-sm-4">
+			<div class="col-sm-3">
 				<div class="form-group">
 					<?php echo form_label('Responsiveness'); ?>
 					<select name="responsive" id="responsive" class="form-control">
@@ -175,6 +188,12 @@ echo form_open('validation/validate');
 						<option name="three" value="Occasional">Occasional</option>
 						<option name="two" value="Rarely">Rarely</option>
 					</select>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="form-group">
+					<?php echo form_label('Disaste Frequency','freqnd');?>
+					<?php echo form_input($freqnd); ?>
 				</div>
 			</div>
 		</div>

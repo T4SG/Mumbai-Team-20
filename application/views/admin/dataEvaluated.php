@@ -6,6 +6,7 @@
  * Time: 5:17 AM
  */
 ?>
+<div id="page-wrapper">
 <div class="row">
 	<div class="page-header">
 		<h1>Prioritized Data</h1>
@@ -53,4 +54,5 @@
 			</div>
 		</div>
 	</div>
+</div>
 </div>
