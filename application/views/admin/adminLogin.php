@@ -81,8 +81,7 @@ echo form_open('admin/adminAuthenticate');
 					<form role="form">
 						<fieldset>
 							<div class="form-group">
-								<?php echo hash('sha256',"code4good");
-									echo form_input($username); ?>
+								<?php echo form_input($username); ?>
 							</div>
 							<div class="form-group">
 								<?php echo form_input($password); ?>

@@ -9,17 +9,22 @@
 <div id="page-wrapper">
 	<div class="row">
 		<div class="col-sm-12">
+			<h1 class="page-header" style="margin-top: 10px">Administrator Dashboard</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
 			<?php
 				$user = array(
 					'id' => 'user',
 					'name' => 'user',
-					'class' => 'btn btn-info btn-lg',
+					'class' => 'btn btn-outline btn-success btn-lg btn-block',
 					'value' => 'Add Local Partners',
 				);
 				$admin = array(
 					'id' => 'admin',
 					'name' => 'admin',
-					'class' => 'btn btn-info btn-lg',
+					'class' => 'btn btn-outline btn-success btn-lg btn-block',
 					'value' => 'Add HHF user'
 				);
 				$evaluation = array(
@@ -27,7 +32,7 @@
 					'class' => 'evaluation',
 					'name' => 'evaluate',
 					'value' => 'Evaluate',
-					'class' => 'btn btn-info btn-lg'
+					'class' => 'btn btn-outline btn-success btn-lg btn-block'
 				);
 				echo form_open('admin/adminDashboard');
 			?>

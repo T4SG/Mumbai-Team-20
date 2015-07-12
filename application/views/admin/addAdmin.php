@@ -65,6 +65,11 @@ $city = array(
 	echo form_open('admin/addAdmin');
 ?>
 <div id="page-wrapper">
+	<div class="row">
+		<div class="col-sm-12">
+			<h1 class="page-header" style="margin-top: 10px">Add Adminintrator</h1>
+		</div>
+	</div>
 	<div class="row" style="padding-top: 20px">
 		<div class="col-sm-offset-3 col-sm-6 col-xs-12">
 
