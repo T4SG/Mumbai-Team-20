@@ -62,7 +62,7 @@
 								<?php echo anchor('validation/validate','<i class="fa fa-user fa-fw"></i>Send Request');		 ?>
                             </li>
 							<li>
-								<?php echo anchor('admin/contact','<i class="fa fa-user fa-fw"></i>Reach Us');		 ?>
+								<?php echo anchor('validation/maps','<i class="fa fa-user fa-fw"></i>Reach Us');		 ?>
 							</li>
 							<li>
 								<?php echo anchor('admin/adminAuthenticate','<i class="fa fa-user fa-fw"></i>Admin Login');		 ?>

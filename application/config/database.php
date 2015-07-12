@@ -64,9 +64,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
+	'hostname' => 'http://ec2-52-69-65-82.ap-northeast-1.compute.amazonaws.com/',
 	'username' => 'root',
-	'password' => '',
+	'password' => 'code4good',
 	'database' => 'cfgteam20',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',

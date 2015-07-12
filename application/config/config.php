@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
-$config['base_url'] = 'http://localhost/Mumbai-Team-20';
+$config['base_url'] = 'http://ec2-52-69-65-82.ap-northeast-1.compute.amazonaws.com/Mumbai-Team-20';
 
 /*
 |--------------------------------------------------------------------------

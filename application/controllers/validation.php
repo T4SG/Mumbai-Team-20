@@ -83,8 +83,8 @@ class validation extends CI_Controller{
 		}
 	}
 				 public function maps(){
-					$this->load->view('template/header');
-				//	$this->load->view('template/maps');
-					$this->load->view('template/footer');
+					//$this->load->view('template/header');
+					$this->load->view('template/map');
+					//$this->load->view('template/footer');
  				}
 }

@@ -59,6 +59,11 @@ class admin_model extends CI_Model{
 
 	public function dataEvaluation($evaluation) { $frequency=50;
 		extract($evaluation);
+		$frequency = 2;
+		$responsiveness = 2;
+		$timeline = 6;
+		echo $fr;
+		echo $rr;
 		$sql = "SELECT NoOfStudents,CostOfSchool,Responsiveness,Support,TimeLine,Intake,FreqND,collaborate FROM school";
 		$result = $this->db->query($sql);
 		//echo $this->db->last_query();
@@ -69,11 +74,29 @@ class admin_model extends CI_Model{
 
 				$cost_per_student = ((6000-$row['CostOfSchool']/$row['Intake'])/900)*$ce;
 				$cost_per_student_i = 10*$ce;
-
-				$timeline =  $row['TimeLine']*2*$tr;
+			if($row['TimeLine']=="<5 years"){
+				$timeline =  2*$tr;}
+			else if($row['TimeLine']=="<4 years"){
+				$timeline =  4*$tr;}
+			else if($row['TimeLine']=="<3 years"){
+				$timeline =  6*$tr;}
+			else if($row['TimeLine']=="<2 years"){
+				$timeline =  8*$tr;}
+			else
+				$timeline =  10*$tr;
 				$timeline_i =  10*$tr;
 
-				$responsiveness = ($row['Responsiveness']/4)*$rr;
+	    if($row['Support']=="Very frequent"){
+		$responsiveness = 10*$rr;
+		}
+		else if($row['Support']=="Frequent"){
+				$responsiveness = 7.5*$rr;
+			}
+		else if($row['Support']=="Ocassional"){
+				$responsiveness = 5*$rr;
+			}
+			else
+				$responsiveness = 2.5*$rr;
         $responsiveness_i = 10*$rr;
 
         if($row['Support']=="FULL")
@@ -108,11 +131,18 @@ class admin_model extends CI_Model{
         $coste =  ($cost_per_student/$cost_per_student_i)*10;
         $time = ($timeline/$timeline_i)*10;
         $respc = ($responsiveness/$responsiveness_i);
-      //  $disr = ($frequency/$frequency_i)*10;
+        $disr = ($frequency/$frequency_i)*10;
         $coll = ($collaboration/$collaboration_i);
         $suppor = ($support/$support_i)*10;
         $query1 = "INSERT INTO solution(coste,timee,respc,disr,coll,support,result) VALUES (?,?,?,?,?,?,?)";
-		$exe = $this->db->query($query1, array($coste,$time,$respc,$frequency,$coll,$suppor,$result));
+		$exe = $this->db->query($query1, array($coste,$time,$respc,$disr,$coll,$suppor,$result));
+			//echo $coste;
+			//echo $time;
+			//echo $respc;
+			//echo $frequency;
+			//echo $coll;
+			//echo $suppor;
+			//echo $result;
 				//echo $this->db->last_query();
 }
 		$sql = "SELECT s.Name,s.Place,s.State,s.Country,so.coste,so.timee,so.respc,so.disr,so.coll,so.support,so.result FROM school s,solution so WHERE s.Sr= so.Sr order by so.result desc";
@@ -126,5 +156,11 @@ class admin_model extends CI_Model{
 		$query = "INSERT INTO contact(name,email,area) VALUES(?,?,?)";
 		$sql = $this->db->query($query, array($name,$email,$area));
 		return TRUE;
+	}
+
+	public function get_school(){
+		$sql = "SELECT * FROM school";
+		$query = $this->db->query($sql);
+		return $query;
 	}
 }

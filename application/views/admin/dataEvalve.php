@@ -117,6 +117,18 @@
 				?>
 			</div>
 		</div>
+		<!--<div class="col-sm-6">
+			<div class="form-group">
+				<?php// echo form_label('School:','school'); ?>
+				<select class="form-control" name="school" id="school">
+					<option value>Please Select school</option>
+					<?php// foreach($school->result_array() as $sch){
+						//extract($sch);
+						//echo "<option value='".$Sr."' >".$Name."</option>";
+					//} ?>
+				</select>
+			</div>
+		</div>-->
 		<div class="col-sm-offset-3 col-sm-6">
 			<div class="form-group">
 				<?php

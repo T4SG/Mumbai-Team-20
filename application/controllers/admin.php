@@ -240,6 +240,7 @@ class admin extends CI_Controller{
 
 	public function dataEvaluation(){
 		$this->load->library('form_validation');
+		$data['school'] = $this->admin_model->get_school();
 		if(isset($_POST['evaluation'])){
 			$this->form_validation->set_rules('ce','Cost','required|numeric');
 			$this->form_validation->set_rules('tr','Time','required|numeric');
@@ -259,7 +260,7 @@ class admin extends CI_Controller{
 					$data['error'] = "All fields are required";
 					$this->load->view('template/header');
 					$this->load->view('template/msg',$data);
-					$this->load->view('admin/dataEvalve');
+					$this->load->view('admin/dataEvalve',$data);
 					$this->load->view('template/footer');
 				}
 				else{
@@ -283,13 +284,13 @@ class admin extends CI_Controller{
 				$data['error'] = "Validation Failed";
 				$this->load->view('template/header');
 				$this->load->view('template/msg',$data);
-				$this->load->view('admin/dataEvalve');
+				$this->load->view('admin/dataEvalve',$data);
 				$this->load->view('template/footer');
 			}
 		}
 		else{
 			$this->load->view('template/header');
-			$this->load->view('admin/dataEvalve');
+			$this->load->view('admin/dataEvalve',$data);
 			$this->load->view('template/footer');
 		}
 	}
