@@ -64,7 +64,11 @@
 							<li>
 								<?php echo anchor('admin/contact','<i class="fa fa-user fa-fw"></i>Reach Us');		 ?>
 							</li>
+							<li>
+								<?php echo anchor('admin/adminAuthenticate','<i class="fa fa-user fa-fw"></i>Admin Login');		 ?>
+							</li>
 							<li><?php if(isset($_SESSION['user'])) echo anchor('admin/logout', '<i class="fa fa-search fa-fw"></i>Logout'); ?></li>
+							<li><?php if(isset($_SESSION['user'])) echo anchor('admin/adminAuthenticate', '<i class="fa fa-search fa-fw"></i>Dashboard'); ?></li>
                         </ul>
                      	   <!-- /.nav-second-level -->
                     </li>
