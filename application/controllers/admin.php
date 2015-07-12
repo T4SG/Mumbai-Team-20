@@ -268,11 +268,20 @@ class admin extends CI_Controller{
 						"cr" => $cr,
 						"sr" => $sr
 					);
-					$this->admin_model->dataEvaluation($evaluation);
-					if(true){
-						echo "he";
+					$db['evaluated'] = $this->admin_model->dataEvaluation($evaluation);
+					if(isset($db['evaluated'])){
+						$this->load->view('template/header');
+						$this->load->view('admin/dataEvaluated',$db);
+						$this->load->view('template/footer');
 					}
 				}
+			}
+			else{
+				$data['error'] = "Validation Failed";
+				$this->load->view('template/header');
+				$this->load->view('template/msg',$data);
+				$this->load->view('admin/dataEvalve');
+				$this->load->view('template/footer');
 			}
 		}
 		else{
@@ -280,6 +289,5 @@ class admin extends CI_Controller{
 			$this->load->view('admin/dataEvalve');
 			$this->load->view('template/footer');
 		}
-
 	}
 }
