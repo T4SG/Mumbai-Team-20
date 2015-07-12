@@ -1,0 +1,7 @@
+http://ec2-52-69-65-82.ap-northeast-1.compute.amazonaws.com/
+
+root
+
+code4good
+
+foreach($result->result_array() as $row)
