@@ -64,12 +64,7 @@
                             <li>
                                 <?php echo anchor('','<i class="fa fa-list fa-fw"></i>Member') ?>
                             </li>
-                            <li>
-                                <?php echo anchor('', '<i class="fa fa-search fa-fw"></i>Search') ?>
-                            </li>
-							<li>
-								<?php echo anchor('', '<i class="fa fa-search fa-fw"></i>Search') ?>
-							</li><li><?php if(isset($_SESSION['user'])) echo anchor('admin/logout', '<i class="fa fa-search fa-fw"></i>Logout'); ?></li>
+							<li><?php if(isset($_SESSION['user'])) echo anchor('admin/logout', '<i class="fa fa-search fa-fw"></i>Logout'); ?></li>
                         </ul>
                      	   <!-- /.nav-second-level -->
                     </li>

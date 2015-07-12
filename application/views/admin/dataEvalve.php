@@ -31,7 +31,7 @@
 	);
 	$disr = array(
 		"id" => "disr",
-		"name" => "dr",
+		"name" => "fr",
 		"placeholder" => "Distance Importance",
 		"maxlength" => "50",
 		"class" => "form-control element-width-3",

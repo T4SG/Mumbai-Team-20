@@ -244,18 +244,18 @@ class admin extends CI_Controller{
 			$this->form_validation->set_rules('ce','Cost','required|numeric');
 			$this->form_validation->set_rules('tr','Time','required|numeric');
 			$this->form_validation->set_rules('rr','Responsiveness','required|numeric');
-			$this->form_validation->set_rules('dr','Distance','required|numeric');
+			$this->form_validation->set_rules('fr','Distance','required|numeric');
 			$this->form_validation->set_rules('cr','Collaboration','required|numeric');
 			$this->form_validation->set_rules('sr','Support','required|numeric');
 			if($this->form_validation->run()!=FALSE){
 				$ce = $_POST['ce'];
 				$tr = $_POST['tr'];
 				$rr = $_POST['rr'];
-				$dr = $_POST['dr'];
+				$fr = $_POST['fr'];
 				$cr = $_POST['cr'];
 				$sr = $_POST['sr'];
 
-				if($ce=="" || $tr=="" || $rr=="" || $dr=="" || $cr=="" || $sr==""){
+				if($ce=="" || $tr=="" || $rr=="" || $fr=="" || $cr=="" || $sr==""){
 					$data['error'] = "All fields are required";
 					$this->load->view('template/header');
 					$this->load->view('template/msg',$data);
@@ -267,7 +267,7 @@ class admin extends CI_Controller{
 						"ce" => $ce,
 						"tr" => $tr,
 						"rr" => $rr,
-						"dr" => $dr,
+						"fr" => $fr,
 						"cr" => $cr,
 						"sr" => $sr
 					);
