@@ -2,10 +2,10 @@
 
 //$sql = "SELECT NoOfStudents,latitude,longitude FROM school";
 //$result = $conn->query($sql);
-$la = array();
-$lg = array();
-$impact = array();
-$nos =  array();
+$la = array(/*31,45,67,89,29,18,19,19,28,56*/);
+$lg = array(/*91,86,76,98,95,82,75,89,90,65*/);
+$impact = array(/*100,42,43,56,78,54,32,45,67,18*/);
+$nos =  array(/*34,56,78,90,102,200,87,92,34,27*/);
 $i=0;
 $sql = "SELECT s.latitude,s.longitude,,s.NoOfStudents,so.result FROM school s, solution so WHERE s.Sr = so.Sr ORDER by so.result DESC";
 $resul = $conn->query($sql);
@@ -16,7 +16,7 @@ $resul = $conn->query($sql);
     $impact[$i] = $row['result'];
     $i++;
   }
-/*if ($result->num_rows > 0) {
+if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
     array_push($la, $row["latitude"]);
     array_push($lg, $row["longitude"]);
@@ -25,7 +25,7 @@ $resul = $conn->query($sql);
 else {
     echo "0 results";
     $i=0;
-*/
+
 
 ?>
 
@@ -55,7 +55,7 @@ var nos = [];
   longitude.push(temp);
   temp = parseFloat("<?php echo $impact[0]?>");
   impact.push(temp);
-  temp = parseFloat("<?php echo $nos[0]?>");
+  temp = parseInt("<?php echo $nos[0]?>");
   nos.push(temp);
 
 
@@ -65,7 +65,7 @@ var nos = [];
   longitude.push(temp);
   temp = parseFloat("<?php echo $impact[1]?>");
   impact.push(temp);
-  temp = parseFloat("<?php echo $nos[1]?>");
+  temp = parseInt("<?php echo $nos[1]?>");
   nos.push(temp);
 
 
@@ -75,7 +75,7 @@ var nos = [];
   longitude.push(temp);
   temp = parseFloat("<?php echo $impact[2]?>");
   impact.push(temp);
-  temp = parseFloat("<?php echo $nos[2]?>");
+  temp = parseInt("<?php echo $nos[2]?>");
   nos.push(temp);
 
   
@@ -85,7 +85,7 @@ var nos = [];
   longitude.push(temp);
   temp = parseFloat("<?php echo $impact[3]?>");
   impact.push(temp);
-  temp = parseFloat("<?php echo $nos[3]?>");
+  temp = parseInt("<?php echo $nos[3]?>");
   nos.push(temp);
 
     temp = parseFloat("<?php echo $la[4]?>"); 
@@ -139,14 +139,13 @@ var nos = [];
   longitude.push(temp);
   temp = parseFloat("<?php echo $impact[9]?>");
   impact.push(temp);
-  temp = parseFloat("<?php echo $nos[9]?>");
+  temp = parseInt("<?php echo $nos[9]?>");
   nos.push(temp);
 
 
-/*for (i = 0; i < 10; i++){
-  document.write(longitude[i]);
-    document.write(latitude[i]);
-}*/
+for (i = 0; i < 10; i++){
+    
+}
 function initialize() {
   // Create the map.
 
@@ -164,11 +163,8 @@ function initialize() {
  for (var j=0;j<10;j++)
  {
 
-
-   if(impact[j]<40){
+  if(impact[j]<40){
    
-
-  
     var populationOptions = {
       strokeColor: '#ff0000',
       strokeOpacity: 0.8,
@@ -177,13 +173,13 @@ function initialize() {
       fillOpacity: 0.35,
       map: map,
       center: new google.maps.LatLng(latitude[j], longitude[j]),
-      radius: nos*5000
+      radius: nos[j]*5000
     };
     // Add the circle for this city to the map.
     cityCircle = new google.maps.Circle(populationOptions);
 
 
-    }
+   }
 
    else if (impact[j]>=40&&impact[j]<50)
       {
@@ -196,7 +192,7 @@ function initialize() {
       fillOpacity: 0.35,
       map: map,
       center: new google.maps.LatLng(latitude[j], longitude[j]),
-      radius: nos*5000
+      radius: nos[j]*5000
     };
     // Add the circle for this city to the map.
     cityCircle = new google.maps.Circle(populationOption);
@@ -214,7 +210,7 @@ else if (impact[j]>=50&&impact[j]<60)
       fillOpacity: 0.35,
       map: map,
       center: new google.maps.LatLng(latitude[j], longitude[j]),
-      radius: nos*5000
+      radius: nos[j]*5000
     };
     // Add the circle for this city to the map.
     cityCircle = new google.maps.Circle(populationOption);
@@ -232,7 +228,7 @@ var populationOption = {
       fillOpacity: 0.35,
       map: map,
       center: new google.maps.LatLng(latitude[j], longitude[j]),
-      radius: nos*5000
+      radius: nos[j]*5000
     };
     // Add the circle for this city to the map.
     cityCircle = new google.maps.Circle(populationOption);
