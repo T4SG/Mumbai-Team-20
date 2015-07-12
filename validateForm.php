@@ -73,6 +73,7 @@
 		"name" => "submit",
 		"id" => "submit",
 		"value" => "Submit",
+		"onsubmit"=>"validate()",
 		"class" => "btn btn-success btn-lg btn-block"
 	);
 
@@ -179,6 +180,9 @@ echo form_open('validation/validate');
 </div>
 <?php echo form_close(); ?>
 <script>
+function validate()
+
+{
 var name=document.getElementById('name').value;
 if(!name.match(/^[A-Za-z]+$/))
 {
@@ -233,5 +237,5 @@ var responsive = document.getElementById('responsive').value;
 if (cooperation==null) {alert("Please select a cooperation level")};
 if (duration==null) {alert("Please select a duration")};
 if (responsive==null) {alert("Please select a response level")};
-
+}
 </script>
