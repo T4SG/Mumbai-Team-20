@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:paddingLeft="90dp"
+        android:paddingRight="90dp"
+        android:text="Log In"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#1339F7" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:ems="10" 
+        android:hint="Login Id">
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp" >
+
+        <Button
+            android:id="@+id/button1"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:text="OK"
+            android:textColor="#1339F7" />
+
+        <TextView
+            android:id="@+id/plzwait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please Wait"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#0000FF"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            android:layout_width="50px"
+            android:layout_height="50px"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>

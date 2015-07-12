@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.schoolselection.AdminLogin" >
+
+    <item
+        android:id="@+id/add_user"
+        android:orderInCategory="100"
+        android:title="Add User"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/add_admin"
+        android:orderInCategory="100"
+        android:title="Add Admin"
+        app:showAsAction="never"/>
+
+</menu>

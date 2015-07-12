@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#DBDBDB"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    >
+    
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+            
+            <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="325px"
+        android:src="@drawable/ic_launcher" 
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:background="#ff0000"
+        android:padding="2dp"
+        android:text="Happy Hearts"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:text="At Happy Hearts Fund, your time, talent, work and heart go a long way! Every hour you spend as an HHF volunteer translates into the caring attention for a child that has survived a natural disaster. As a volunteer, you can assist with an HHF special project, help out in the office, help with “on the ground” projects or spread the mission of HHF in your community. No matter how you help, you’ll make a big difference in the lives of children affected by natural disasters.
+
+Happy Hearts Fund needs more people like you… People with great hearts!"
+        android:textSize="15dp" 
+        android:background="@drawable/customborder"/>
+            
+        </LinearLayout>
+    </ScrollView>
+    
+</LinearLayout>
