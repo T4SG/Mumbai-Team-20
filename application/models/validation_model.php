@@ -15,19 +15,15 @@ class validation_model extends CI_Model{
 
 	public function validate($valid){
 		extract($valid);
-		if($name==null && $nameOfSchool==null && $cost==null && $duration==null && $support==null && $collaborate==null && $responsive==null && $expectedStudent==null && $presentStudent==null && $country==null && $state==null && $city==null && $freqnd==""){
-			return FALSE;
-		}
-		else{
 			$query = "INSERT INTO school(Name,UserName,NoOfStudents,CostOfSchool,Responsiveness,Support,collaborate,TimeLine,Intake,State,Country,Place,FreqND) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
 			$sql = $this->db->query($query, array($nameOfSchool,$name,$presentStudent,$cost,$responsive,$support,$collaborate,$duration,$expectedStudent,$state,$country,$city,$freqnd));
 			echo $this->db->last_query();
-			if($sql==1){
+			if($sql){
 				$success = "Your request has been sent successfully";
 				return $success;
 			}
 			else return FALSE;
 		}
-	}
+
 
 } 

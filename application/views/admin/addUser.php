@@ -27,6 +27,7 @@ $password = array(
 		"class" => "form-control col-md-4 col-xs-12",
 		"id" => "password",
 		"name" => "password",
+		"type" => "password",
 		"placeholder" => "Enter Password",
 		"autocomplete" => "off"
 	);
@@ -34,6 +35,7 @@ $passwordC = array(
 		"class" => "form-control col-md-4 col-xs-12",
 		"id" => "passwordC",
 		"name" => "passwordC",
+		"type" => "password",
 		"onblur"=>"chkpass()",
 		"placeholder" => "Enter Password Again",
 		"autocomplete" => "off"

@@ -65,9 +65,9 @@ class validation extends CI_Controller{
 				);
 
 				$query = $this->validation_model->validate($validate);
-					$data['success'] = $query;
+					//$data['success'] = "School Entered";
 					$this->load->view('template/header');
-					$this->load->view('template/msg',$data);
+					$this->load->view('template/msg',"School Entered");
 					$this->load->view('validation/validateForm');
 					$this->load->view('template/footer');
 			}
