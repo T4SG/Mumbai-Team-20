@@ -24,6 +24,7 @@ define('CSS', 'http://localhost/Mumbai-Team-20/assets/css/');
 define('JS',  'http://localhost/Mumbai-Team-20/assets/js/');
 define('IMAGES',  'http://localhost/Mumbai-Team-20/assets/images/');
 define('ASSET',  'http://localhost/Mumbai-Team-20/assets/');
+define('MAP', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCVqZOv6TccIqCdbMnqx7mhBEeojlAmHtQ');
 
 /*
 |--------------------------------------------------------------------------

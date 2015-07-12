@@ -15,7 +15,7 @@ class admin extends CI_Controller{
 	}
 
 	public function index(){
-		$this->adminAuthenticate();
+		$this->contact();
 	}
 
 	public function adminAuthenticate(){
@@ -290,6 +290,49 @@ class admin extends CI_Controller{
 		else{
 			$this->load->view('template/header');
 			$this->load->view('admin/dataEvalve');
+			$this->load->view('template/footer');
+		}
+	}
+
+	public function contact(){
+		$this->load->library('form_validation');
+		if(isset($_POST['submit'])){
+			$this->form_validation->set_rules('name','Name','required');
+			$this->form_validation->set_rules('email','Email','required|valid_email');
+			$this->form_validation->set_rules('area','TextArea','required');
+			if($this->form_validation->run()!=FALSE){
+				$name = $_POST['name'];
+				$email = $_POST['email'];
+				$area = $_POST['area'];
+
+				$contact = array(
+					'name' => $name,
+					'email' => $email,
+					'area' => $area
+				);
+				$give = $this->admin_model->contactus($contact);
+				if(isset($give)){
+					$data['success'] = "Message sent";
+					$this->load->view('template/msg',$data);
+					$this->load->view('template/contact');
+					$this->load->view('template/footer');
+				}
+				else{
+					$data['warning'] = "Message not sent";
+					$this->load->view('template/msg',$data);
+					$this->load->view('template/contact');
+					$this->load->view('template/footer');
+				}
+			}
+			else{
+				$data['error'] = "Message not sent";
+				$this->load->view('template/msg',$data);
+				$this->load->view('template/contact');
+				$this->load->view('template/footer');
+			}
+		}
+		else{
+			$this->load->view('template/contact');
 			$this->load->view('template/footer');
 		}
 	}

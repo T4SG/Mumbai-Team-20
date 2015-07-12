@@ -61,44 +61,11 @@
                             <li>
 								<?php echo anchor('validation/validate','<i class="fa fa-user fa-fw"></i>Send Request');		 ?>
                             </li>
-                            <li>
-                                <?php echo anchor('','<i class="fa fa-list fa-fw"></i>Member') ?>
-                            </li>
 							<li><?php if(isset($_SESSION['user'])) echo anchor('admin/logout', '<i class="fa fa-search fa-fw"></i>Logout'); ?></li>
                         </ul>
                      	   <!-- /.nav-second-level -->
                     </li>
                     
-                    <li>
-                        <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#">Second Level Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Second Level Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Third Level <span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                </ul>
-                                <!-- /.nav-third-level -->
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
 
                 </ul>
                 <!-- /#side-menu -->

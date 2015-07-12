@@ -119,7 +119,12 @@ class admin_model extends CI_Model{
 		$exe = $this->db->query($sql);
 		//echo $this->db->last_query();
 		return $exe;
-
-
 	}
+
+	public function contactus($contact){
+		extract($contact);
+		$query = "INSERT INTO contact(name,email,area) VALUES(?,?,?)";
+		$sql = $this->db->query($query, array($name,$email,$area));
+		return TRUE;
 	}
+}

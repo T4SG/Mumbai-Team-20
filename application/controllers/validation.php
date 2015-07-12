@@ -65,20 +65,11 @@ class validation extends CI_Controller{
 				);
 
 				$query = $this->validation_model->validate($validate);
-				if($query==FALSE){
-					$data['error'] = "Error! Please Try Again.";
-					$this->load->view('template/header');
-					$this->load->view('template/msg',$data);
-					$this->load->view('validation/validateForm');
-					$this->load->view('template/footer');
-				}
-				else{
 					$data['success'] = $query;
 					$this->load->view('template/header');
 					$this->load->view('template/msg',$data);
 					$this->load->view('validation/validateForm');
 					$this->load->view('template/footer');
-				}
 			}
 		}
 		else{
@@ -87,5 +78,9 @@ class validation extends CI_Controller{
 			$this->load->view('template/footer');
 		}
 	}
-
-} 
+				 public function maps(){
+					$this->load->view('template/header');
+				//	$this->load->view('template/maps');
+					$this->load->view('template/footer');
+ 				}
+}
